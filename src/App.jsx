@@ -1,22 +1,15 @@
-import { StrictMode } from 'react'
 import './App.css'
-import { BrowserRouter } from 'react-router'
-import { createBrowserHistory } from 'history'
 import Search from './pages/Search'
 import Home from './pages/Home'
-
-
+import { Routes, Route } from 'react-router'
 
 function App() {
   return (
-
     <>
-      <Router history={history} >
-        <Routes>
-          <Routes path='/' elements={<Search />} />
-          <Routes path='/Home' elements={<Home />} />
-        </Routes>
-      </Router >
+      <Routes>
+        <Route path='/' element={<Search />} />
+        <Route path='/Home' element={<Home />} />
+      </Routes>
     </>
   )
 }
