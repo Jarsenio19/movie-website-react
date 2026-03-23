@@ -23,22 +23,22 @@ const Header = () => {
 
                         <nav className="primary-navigation" id="primary-navigation">
                             <ul aria-label="Primary" role="list" className="nav-list">
-                                <li><a href="home.html">Home</a></li>
+                                <li><a>Home</a></li>
 
                                 <li className="mega-parent">
-                                    <a href="#" id="genresBtn">Genres</a>
+                                    <a id="genresBtn">Genres</a>
                                     <div className="mega-menu" id="mega-menu">
                                         <div className="mega-column">
-                                            <a href="#">Action</a>
-                                            <a href="#">Adventure</a>
-                                            <a href="#">Comedy</a>
+                                            <a>Action</a>
+                                            <a >Adventure</a>
+                                            <a>Comedy</a>
                                         </div>
                                     </div>
                                 </li>
 
-                                <li><a href="movie-pages/movies.html">Movies</a></li>
-                                <li><a href="tv-series/tv-series.html">TV-Series</a></li>
-                                <li><a href="top-IMDb/top-Imdb.html">Top IMDb</a></li>
+                                <li><a >Movies</a></li>
+                                <li><a >TV-Series</a></li>
+                                <li><a>Top IMDb</a></li>
                             </ul>
                         </nav>
 

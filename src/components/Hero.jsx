@@ -19,7 +19,7 @@ const Hero = () => {
                 JaysonMovies - Just a better place for watching online movies for free!
               </h2>
               <button className="button">
-                <a href="home.html">Go to Home page</a>
+                <a>Go to Home page</a>
               </button>
             </div>
 

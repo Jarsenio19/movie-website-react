@@ -11,7 +11,7 @@ const Description = () => {
           <p className="fs-500 text-neutral-200">
             <a
               className="text-primary-400 text-decoration-none"
-              href="home.html"
+
             >
               JaysonMovies
             </a>
@@ -31,39 +31,39 @@ const Description = () => {
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a href="#">Reality-TV</a></li>
-              <li><a href="#">Comedy</a></li>
-              <li><a href="#">Drama</a></li>
-              <li><a href="#">Crime</a></li>
-              <li><a href="#">Horror</a></li>
+              <li><a>Reality-TV</a></li>
+              <li><a>Comedy</a></li>
+              <li><a>Drama</a></li>
+              <li><a>Crime</a></li>
+              <li><a>Horror</a></li>
             </ul>
           </div>
 
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">COUNTRY</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a href="#">United States</a></li>
-              <li><a href="#">Australia</a></li>
-              <li><a href="#">Croatia</a></li>
-              <li><a href="#">Serbia</a></li>
-              <li><a href="#">Slovenia</a></li>
+              <li><a>United States</a></li>
+              <li><a>Australia</a></li>
+              <li><a>Croatia</a></li>
+              <li><a>Serbia</a></li>
+              <li><a>Slovenia</a></li>
             </ul>
           </div>
 
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">FREE MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a href="#">Movies</a></li>
-              <li><a href="#">TV-Series</a></li>
-              <li><a href="#">Top IMDb</a></li>
+              <li><a>Movies</a></li>
+              <li><a>TV-Series</a></li>
+              <li><a>Top IMDb</a></li>
             </ul>
           </div>
 
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">HELP</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a href="#">FAQ's</a></li>
-              <li><a href="#">DMCA</a></li>
+              <li><a>FAQ's</a></li>
+              <li><a>DMCA</a></li>
             </ul>
           </div>
 
