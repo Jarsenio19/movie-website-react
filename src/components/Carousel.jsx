@@ -12,15 +12,16 @@ const Carousel = () => {
             <ul className="carousel-track">
               <li className="carousel-slide current-slide">
                 <a>
-                  <img className="carousel-image" src="images/movie-poster/Scary-movie1.png" alt="" />
+                  <img className="carousel-image" src="../../public/Movie-poster/Scream.jpg" alt="" />
                   <div className="carousel-details">
-                    <h2>Scary Movie</h2>
+
+                    <h2>Scream 7</h2>
                     <p>
-                      <span className="carousel-badge">HD</span>- 1h 28m Dark Comedy, Parody, Raunchy Comedy...
+                      <span className="carousel-badge">HD</span>  -  114 min Horror, Mystery, Crime
                     </p>
                     <br />
                     <p>
-                      A year after disposing of the body of a man they accidentally killed, a group of dumb teenagers are stalked by a bumbling serial killer.. ...
+                      When a new Ghostface killer emerges in the quiet town where Sidney Prescott has built a new life, her darkest fears are realized as her daughter...
                     </p>
                     <button className="button1">Watch Now</button>
                   </div>
