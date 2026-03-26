@@ -51,7 +51,7 @@ const Header = () => {
                             placeholder="Search.."
                         />
                         <button className="button display-sm-none display-md-inline-flex">
-                            <img src="search.png" alt="" />
+                            <img src="../../public/search.png" alt="" />
                         </button>
                     </div>
 

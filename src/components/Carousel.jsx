@@ -4,6 +4,7 @@ const Carousel = () => {
   return (
     <main>
       <section aria-label="Movie photos">
+
         <div className="carousel">
           <button className="carousel__bttn carousel__bttn--left">
             <img src="images/carousel/back.png" alt="" />
@@ -14,17 +15,16 @@ const Carousel = () => {
                 <a>
                   <img className="carousel-image" src="../../public/Movie-poster/Scream.jpg" alt="" />
                   <div className="carousel-details">
-
                     <h2>Scream 7</h2>
                     <p>
                       <span className="carousel-badge">HD</span>  -  114 min Horror, Mystery, Crime
                     </p>
-                    <br />
                     <p>
                       When a new Ghostface killer emerges in the quiet town where Sidney Prescott has built a new life, her darkest fears are realized as her daughter...
                     </p>
                     <button className="button1">Watch Now</button>
                   </div>
+
                 </a>
               </li>
               ``

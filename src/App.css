@@ -189,8 +189,8 @@ body {
 }
 
 main {
+  min-height: 570px;
 
-  min-height: 100vh;
 }
 
 .p {
@@ -303,7 +303,7 @@ main {
   border-radius: 8px;
   padding: 15px 10px;
   cursor: pointer;
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-neutral-100);
   font-size: var(--fs-600);
   font-weight: var(--fw-regular);
 
@@ -314,15 +314,15 @@ main {
 .button1 {
   border: none;
   border-radius: 5px;
-  padding: 11px 0 15px;
+  padding: 9px 0 15px;
   cursor: pointer;
   background-color: var(--clr-primary-400);
-  font-size: var(--size-600);
+  font-size: var(--size-300);
   font-weight: var(--fw-regular);
   color: var(--clr-accent-100);
 
-  width: 100px;
-  height: 40px;
+  width: 80px;
+  height: 30px;
 }
 
 /* Logo */
@@ -459,12 +459,11 @@ main {
 
 .carousel {
   position: relative;
-  height: 650px;
+  height: 570px;
   width: 100%;
   /* change it later for width 100% */
   margin: auto;
   margin-top: 10px;
-
 }
 
 .carousel-image {
@@ -477,6 +476,7 @@ main {
   height: 100%;
   position: relative;
   overflow: hidden;
+
 }
 
 .carousel-track {
@@ -485,6 +485,7 @@ main {
   padding: 0;
   position: relative;
   height: 100%;
+
 }
 
 .carousel-slide {
@@ -495,21 +496,23 @@ main {
 }
 
 .carousel-details {
-  margin: auto;
+  margin: 50px;
   position: absolute;
-  bottom: 60px;
+  bottom: -5px;
   left: 80px;
   color: var(--clr-neutral-100);
   cursor: pointer;
+  width: 50rem;
+
 }
 
 .carousel-details>h2 {
-  font-size: var(--fs-900);
-
+  font-size: var(--fs-800);
 }
 
 .carousel-details>p {
   font-size: var(--fs-600);
+
 }
 
 .carousel-badge {
@@ -555,6 +558,7 @@ main {
   position: absolute;
   bottom: 20px;
   inset-inline: 0;
+
 }
 
 .carousel-indicator {
@@ -583,11 +587,11 @@ main {
 }
 
 .box-wrapper {
-  display: flex;
-  gap: 1rem;
-  column-gap: 2rem;
-  row-gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2rem;
+  padding-bottom: 1rem;
+
 }
 
 .box-container {
@@ -598,7 +602,7 @@ main {
 
 .box {
   border: none;
-  height: 240px;
+  height: 250px;
   width: 170px;
   overflow: hidden;
   cursor: pointer;
@@ -642,6 +646,7 @@ main {
   transition: opacity 0.4s ease;
   border-radius: 10px;
   cursor: pointer;
+
 }
 
 .box-container:hover .overlay {
@@ -679,8 +684,8 @@ main {
 
 .title {
   color: var(--clr-neutral-100);
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
 
 }
 
@@ -1179,7 +1184,7 @@ main {
 }
 
 .container {
-  --max-width: 1200px;
+  --max-width: 1600px;
   --padding: 1rem;
 
 
@@ -1199,7 +1204,7 @@ main {
 }
 
 .even-columns {
-  --max-width: 1500px;
+  --max-width: 1600px;
   --padding: 1rem;
 
 

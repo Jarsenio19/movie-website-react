@@ -2,7 +2,7 @@ import React from 'react'
 
 const LatestMoviesCard = () => {
 
-  const suggestionMovies = [
+  const latestMovies = [
     {
       title: 'King Ivory',
       image: '../../public/Movie-poster/King Ivory.jpg',
@@ -84,9 +84,9 @@ const LatestMoviesCard = () => {
   return (
     <section className="padding-block-100">
       <div className='container'>
-        <h3>SUGGESTIONS</h3>
+        <h3>LATEST MOVIES</h3>
         <div className="box-wrapper">
-          {suggestionMovies.map((detail, index) => (
+          {latestMovies.map((detail, index) => (
             <a key={index}>
               <div className='box-container'>
                 <div className='box'>

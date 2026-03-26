@@ -20,6 +20,11 @@ const SuggestionCard = () => {
       isHD: true,
     },
     {
+      title: 'The Bride!',
+      image: '../../public/Movie-poster/The Bride!.jpg',
+      isHD: true,
+    },
+    {
       title: 'Jurassic World: Rebirth',
       image: '../../public/Movie-poster/Jurassic World Rebirth.jpg',
       isHD: true,
