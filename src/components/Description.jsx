@@ -5,16 +5,12 @@ const Description = () => {
     <section className="padding-block-200 bg-accent-900">
       <div className="even-columns">
 
-        <div>
+        <div className='padding-block-500'>
           <div className="third-logo">JAYSONMOVIES</div>
 
           <p className="fs-500 text-neutral-200">
-            <a
-              className="text-primary-400 text-decoration-none"
+            <a className="text-primary-400 text-decoration-none">JaysonMovies</a>
 
-            >
-              JaysonMovies
-            </a>
             - Free movies online, here you can watch movies online in high quality
             for free without annoying of advertising, just come and enjoy your
             movies online. fmovie, fmovies, bmovies
@@ -27,8 +23,7 @@ const Description = () => {
         </div>
 
         <div className="links">
-
-          <div className="column">
+          <div className="column | ">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
               <li><a>Reality-TV</a></li>

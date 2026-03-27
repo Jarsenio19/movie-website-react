@@ -23,7 +23,9 @@ const Header = () => {
 
                         <nav className="primary-navigation" id="primary-navigation">
                             <ul aria-label="Primary" role="list" className="nav-list">
-                                <li><a>Home</a></li>
+                                <li>
+                                    <a>Home</a> {/* <Link to='/home'>Home</Link> */}
+                                </li>
 
                                 <li className="mega-parent">
                                     <a id="genresBtn">Genres</a>
@@ -57,7 +59,7 @@ const Header = () => {
 
                 </div> {/* heading-searchbox-ul */}
             </div> {/* container */}
-        </header>
+        </header >
     )
 }
 

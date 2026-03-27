@@ -1,4 +1,4 @@
-import Carousel from '../components/Carousel'
+import Carousel from '../components/Carousel/Carousel'
 import SuggestionCard from '../components/SuggestionCard'
 import LatestMoviesCard from '../components/LatestMoviesCard'
 import Header from '../components/Header'

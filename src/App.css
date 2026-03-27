@@ -84,6 +84,9 @@
 
 }
 
+body {
+  margin: 0;
+}
 
 /* https://piccalil.li/blog/a-more-modern-css-reset/  */
 /* Box sizing rules */
@@ -189,7 +192,8 @@ body {
 }
 
 main {
-  min-height: 570px;
+  min-height: 100vh;
+
 
 }
 
@@ -418,6 +422,7 @@ main {
   text-decoration: none;
   font-size: var(--size-600);
   font-weight: var(--fw-semi-bold);
+
 }
 
 .nav-list a:hover,
@@ -457,12 +462,12 @@ main {
 
 /* Carousel */
 
-.carousel {
+/* .carousel {
   position: relative;
   height: 570px;
-  width: 100%;
-  /* change it later for width 100% */
-  margin: auto;
+  width: 100%; */
+/* change it later for width 100% */
+/* margin: auto;
   margin-top: 10px;
 }
 
@@ -575,7 +580,7 @@ main {
 
 .carousel-indicator.current-slide {
   background: var(--clr-accent-1000);
-}
+} */
 
 /* Home box */
 
@@ -603,7 +608,7 @@ main {
 .box {
   border: none;
   height: 250px;
-  width: 170px;
+  width: 100%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -754,7 +759,7 @@ main {
   .box {
     border: none;
     height: 450px;
-    width: 360px;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -972,7 +977,7 @@ main {
 @media (max-width: 54em) {
 
   /* Nav */
-  .primary-navigation {
+  /* .primary-navigation {
     display: none;
     position: absolute;
     inset: 3.9rem var(--size-700) auto;
@@ -1018,7 +1023,7 @@ main {
 
   .primary-bttn {
     display: none;
-  }
+  } */
 
   /* Lower section */
 
@@ -1155,8 +1160,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 10px; */
   background: var(--clr-accent-1000);
-
 
 }
 

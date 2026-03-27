@@ -1,4 +1,4 @@
-import React from 'react'
+import MovieCards from '../components/MovieCards'
 
 const SuggestionCard = () => {
 
@@ -91,19 +91,17 @@ const SuggestionCard = () => {
         <h3>SUGGESTIONS</h3>
         <div className="box-wrapper">
           {suggestionMovies.map((detail, index) => (
-            <a key={index}>
-              <div className='box-container'>
-                <div className='box'>
-                  <img src={detail.image} alt="" />
-                  <h3>{detail.title}</h3>
-                </div>
-                {detail.isHD && <div className="badge">HD</div>}
-                <div className="overlay">
-                  <div className="play-bttn">&#9658;</div>
-                  <h3 className="title">{detail.title}</h3>
-                </div>
-              </div>
-            </a>
+
+            <MovieCards
+              key={index}
+              image={detail.image}
+              title={detail.title}
+              isHD={detail.isHD}
+            // // isCAM={detail.isCAM}
+            // isEp={true}
+            // epNum={13}
+            />
+
           ))}
 
         </div>

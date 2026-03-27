@@ -1,8 +1,8 @@
-import React from 'react'
+import MovieCards from "../components/MovieCards"
 
 const LatestTvSeries = () => {
 
-  const latestSries = [
+  const latestSeries = [
     {
       title: 'Invincible - Season 4',
       image: '../../public/Movie-poster/Invincible - Season 4.jpg',
@@ -85,20 +85,18 @@ const LatestTvSeries = () => {
       <div className='container'>
         <h3>LATEST TV SERIES</h3>
         <div className="box-wrapper">
-          {latestSries.map((detail, index) => (
-            <a key={index}>
-              <div className='box-container'>
-                <div className='box'>
-                  <img src={detail.image} alt="" />
-                  <h3>{detail.title}</h3>
-                </div>
-                {detail.isHD && <div className="badge">HD</div>}
-                <div className="overlay">
-                  <div className="play-bttn">&#9658;</div>
-                  <h3 className="title">{detail.title}</h3>
-                </div>
-              </div>
-            </a>
+          {latestSeries.map((detail, index) => (
+
+            <MovieCards
+              key={index}
+              image={detail.image}
+              title={detail.title}
+              isHD={detail.isHD}
+            // // isCAM={detail.isCAM}
+            // isEp={true}
+            // epNum={13}
+            />
+
           ))}
 
         </div>
