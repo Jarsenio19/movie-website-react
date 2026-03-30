@@ -864,10 +864,86 @@ main {
 
 }
 
-.boxers {
-  width: 180px;
+.video-container {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.video-container img {
+  width: 100%;
+  height: 500px;
+  display: block;
+
+}
+
+.P-bttn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--clr-primary-400);
+
+}
+
+.overlay1 {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* adjust darkness */
+}
+
+.P-bttn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.P-bttn:hover {
+  background-color: #1593a1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.image-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* overlay color */
+}
+
+.boxer-container {
+  display: flex;
+  border: 1px solid red;
+  color: var(--clr-neutral-100);
+}
+
+.boxer-details {
   border: 1px solid red;
 }
+
+.details-container {
+  display: flex;
+}
+
+
 
 
 /* 
