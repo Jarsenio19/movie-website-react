@@ -8,7 +8,7 @@ const MoviesCard = () => {
 
         <div className="box-wrapper">
 
-          <a href="/index.html">
+          <a>
             <div className="box-wrapper">
               <div className="box-container">
                 <div className="box">
@@ -24,7 +24,7 @@ const MoviesCard = () => {
           </a>
 
           {/* Repeat block */}
-          <a href="/index.html">
+          <a>
             <div className="box-wrapper">
               <div className="box-container">
                 <div className="box">

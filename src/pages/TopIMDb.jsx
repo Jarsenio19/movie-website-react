@@ -1,19 +1,18 @@
 import React from 'react'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
-import WatchMovies from '../components/WatchMovies'
+import WatchTopIMDb from '../components/WatchTopIMDb'
 import Pagination from '../components/Pagination'
+import Footer from '../components/Footer'
 
-const Movies = () => {
+const TopIMDb = () => {
   return (
     <>
       <Header />
-      <WatchMovies />
+      <WatchTopIMDb />
       <Pagination />
       <Footer />
-
     </>
   )
 }
 
-export default Movies
+export default TopIMDb

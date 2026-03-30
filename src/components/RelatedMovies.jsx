@@ -1,7 +1,9 @@
-import MovieCards from "./MovieCards"
+import React from 'react'
+import MovieCards from './MovieCards'
 
-const WatchMovies = () => {
-  const watchMovies = [
+const RelatedMovies = () => {
+  const relatedMovies = [
+
     {
       title: 'GOAT (2026)',
       image: '../../public/Movie-poster/GOAT.jpg',
@@ -82,88 +84,14 @@ const WatchMovies = () => {
       image: '../../public/Movie-poster/Predator Badlands.jpg',
       isHD: true,
     },
-    {
-      title: 'King Ivory',
-      image: '../../public/Movie-poster/King Ivory.jpg',
-      isHD: true,
-    },
-    {
-      title: 'How to Make a Killing',
-      image: '../../public/Movie-poster/How to Make a Killing.jpg',
-      isHD: true,
-    },
-    {
-      title: 'No Choice',
-      image: '../../public/Movie-poster/No Choice.jpg',
-      isHD: true,
-    },
-    {
-      title: 'I Can Only Imagine 2',
-      image: '../../public/Movie-poster/I Can Only Imagine 2.jpg',
-      isHD: true,
-    },
-    {
-      title: 'GOAT',
-      image: '../../public/Movie-poster/GOAT.jpg',
-      isHD: true,
-    },
-    {
-      title: 'Magellan',
-      image: '../../public/Movie-poster/Magellan.jpg',
-      isHD: true,
-    },
-    {
-      title: 'The Tai Chi Master',
-      image: '../../public/Movie-poster/The Tai Chi Master.jpg',
-      isHD: true,
-    },
-    {
-      title: 'Send Help',
-      image: '../../public/Movie-poster/SendHelp.jpg',
-      isHD: true,
-    },
-    {
-      title: 'The Dresden Sun',
-      image: '../../public/Movie-poster/The Dresden Sun.jpg',
-      isHD: true,
-    },
-    {
-      title: 'I Killed Him in My Sleep',
-      image: '../../public/Movie-poster/I Killed Him in My Sleep.jpg',
-      isHD: true,
-    },
-    {
-      title: 'Project Hail Mary',
-      image: '../../public/Movie-poster/Project Hail Mary.jpg',
-      isHD: true,
-    },
-    {
-      title: 'By Design',
-      image: '../../public/Movie-poster/By Design.jpg',
-      isHD: true,
-    },
-    {
-      title: 'The Love That Remains',
-      image: '../../public/Movie-poster/The Love That Remains.jpg',
-      isHD: true,
-    },
-    {
-      title: 'Dream Story',
-      image: '../../public/Movie-poster/Dream Story.jpg',
-      isHD: true,
-    },
-    {
-      title: 'The Rise of the Red Hot Chili Peppers: Our Brother, Hillel',
-      image: '../../public/Movie-poster/The Rise of the Red Hot Chili Peppers Our Brother, Hillel.jpg',
-      isHD: true,
-    },
+
   ]
   return (
     <section className="padding-block-100">
-      <div className='container'>
-        <h3>WATCH MOVIES</h3>
+      <div className='container-movie-page'>
+        <h3>RELATED MOVIES</h3>
         <div className="box-wrapper">
-          {watchMovies.map((detail, index) => (
+          {relatedMovies.map((detail, index) => (
 
             <MovieCards
               key={index}
@@ -171,8 +99,8 @@ const WatchMovies = () => {
               title={detail.title}
               isHD={detail.isHD}
               isCAM={detail.isCAM}
-              isEp={true}
-              epNum={13}
+            // isEp={true}
+            // epNum={13}
             />
 
           ))}
@@ -183,4 +111,4 @@ const WatchMovies = () => {
   )
 }
 
-export default WatchMovies
+export default RelatedMovies

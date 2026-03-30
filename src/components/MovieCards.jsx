@@ -1,4 +1,4 @@
-const MovieCards = ({ image, title, isHD, /*isCAM*/ isEp, epNum }) => {
+const MovieCards = ({ image, title, isHD, isCAM, isEp, epNum }) => {
   return (
     <a>
       <div className='box-container'>
@@ -8,8 +8,8 @@ const MovieCards = ({ image, title, isHD, /*isCAM*/ isEp, epNum }) => {
         </div>
 
         {isHD && <div className="badge">HD</div>}
-        {/* {detail.isCAM && <div className="badge">CAM</div>} */}
-        {isEp && <div className="badge">EP {epNum} </div>}
+        {isCAM && <div className="badge">CAM</div>}
+        {isEp && <div className="badge1">EP {epNum} </div>}
 
         <div className="overlay">
           <div className="play-bttn">&#9658;</div>

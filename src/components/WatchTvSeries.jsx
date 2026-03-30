@@ -1,8 +1,8 @@
-import MovieCards from "../components/MovieCards"
+import React from 'react'
+import MovieCards from './MovieCards'
 
-const LatestTvSeries = () => {
-
-  const latestSeries = [
+const WatchTvSeries = () => {
+  const watchTvSeries = [
     {
       title: 'Invincible - Season 4',
       image: '../../public/Movie-poster/Invincible - Season 4.jpg',
@@ -78,14 +78,90 @@ const LatestTvSeries = () => {
       image: '../../public/Movie-poster/Rooster - Season 1.jpg',
       isHD: true,
     },
-  ]
 
+    {
+      title: 'King Ivory',
+      image: '../../public/Movie-poster/King Ivory.jpg',
+      isHD: true,
+    },
+    {
+      title: 'How to Make a Killing',
+      image: '../../public/Movie-poster/How to Make a Killing.jpg',
+      isHD: true,
+    },
+    {
+      title: 'No Choice',
+      image: '../../public/Movie-poster/No Choice.jpg',
+      isHD: true,
+    },
+    {
+      title: 'I Can Only Imagine 2',
+      image: '../../public/Movie-poster/I Can Only Imagine 2.jpg',
+      isHD: true,
+    },
+    {
+      title: 'GOAT',
+      image: '../../public/Movie-poster/GOAT.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Magellan',
+      image: '../../public/Movie-poster/Magellan.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Tai Chi Master',
+      image: '../../public/Movie-poster/The Tai Chi Master.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Send Help',
+      image: '../../public/Movie-poster/SendHelp.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Dresden Sun',
+      image: '../../public/Movie-poster/The Dresden Sun.jpg',
+      isHD: true,
+    },
+    {
+      title: 'I Killed Him in My Sleep',
+      image: '../../public/Movie-poster/I Killed Him in My Sleep.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Project Hail Mary',
+      image: '../../public/Movie-poster/Project Hail Mary.jpg',
+      isHD: true,
+    },
+    {
+      title: 'By Design',
+      image: '../../public/Movie-poster/By Design.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Love That Remains',
+      image: '../../public/Movie-poster/The Love That Remains.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Dream Story',
+      image: '../../public/Movie-poster/Dream Story.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Rise of the Red Hot Chili Peppers: Our Brother, Hillel',
+      image: '../../public/Movie-poster/The Rise of the Red Hot Chili Peppers Our Brother, Hillel.jpg',
+      isHD: true,
+    },
+  ]
   return (
+
     <section className="padding-block-100">
       <div className='container'>
-        <h3>LATEST TV SERIES</h3>
+        <h3>WATCH TV-SERIES</h3>
         <div className="box-wrapper">
-          {latestSeries.map((detail, index) => (
+          {watchTvSeries.map((detail, index) => (
 
             <MovieCards
               key={index}
@@ -94,7 +170,7 @@ const LatestTvSeries = () => {
               isHD={detail.isHD}
               isCAM={detail.isCAM}
               isEp={true}
-              epNum={13}
+              epNum={1}
             />
 
           ))}
@@ -102,7 +178,8 @@ const LatestTvSeries = () => {
         </div>
       </div>
     </section>
+
   )
 }
 
-export default LatestTvSeries
+export default WatchTvSeries
