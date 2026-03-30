@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from '../components/Header/Header'
-import Hero from '../components/Hero'
+import Filmbox from '../components/Filmbox'
+import RelatedMovies from '../components/RelatedMovies'
 import Footer from '../components/Footer'
 
-const Search = () => {
+const Film = () => {
   return (
     <>
       <Header />
-      <Hero />
+      <Filmbox />
+      <RelatedMovies />
       <Footer />
     </>
-
   )
 }
 
-export default Search
+export default Film

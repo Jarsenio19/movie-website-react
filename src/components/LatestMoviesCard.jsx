@@ -1,122 +1,106 @@
 import React from 'react'
 
 const LatestMoviesCard = () => {
+
+  const latestMovies = [
+    {
+      id: 'king-ivory-01',
+      title: 'King Ivory',
+      image: '../../public/Movie-poster/King Ivory.jpg',
+      isHD: true,
+      genre: 'action',
+    },
+    {
+      title: 'How to Make a Killing',
+      image: '../../public/Movie-poster/How to Make a Killing.jpg',
+      isHD: true,
+      genre: 'romance',
+    },
+    {
+      title: 'No Choice',
+      image: '../../public/Movie-poster/No Choice.jpg',
+      isHD: true,
+      genre: 'romance',
+    },
+    {
+      title: 'I Can Only Imagine 2',
+      image: '../../public/Movie-poster/I Can Only Imagine 2.jpg',
+      isHD: true,
+    },
+    {
+      title: 'GOAT',
+      image: '../../public/Movie-poster/GOAT.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Magellan',
+      image: '../../public/Movie-poster/Magellan.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Tai Chi Master',
+      image: '../../public/Movie-poster/The Tai Chi Master.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Send Help',
+      image: '../../public/Movie-poster/SendHelp.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Dresden Sun',
+      image: '../../public/Movie-poster/The Dresden Sun.jpg',
+      isHD: true,
+    },
+    {
+      title: 'I Killed Him in My Sleep',
+      image: '../../public/Movie-poster/I Killed Him in My Sleep.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Project Hail Mary',
+      image: '../../public/Movie-poster/Project Hail Mary.jpg',
+      isHD: true,
+    },
+    {
+      title: 'By Design',
+      image: '../../public/Movie-poster/By Design.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Love That Remains',
+      image: '../../public/Movie-poster/The Love That Remains.jpg',
+      isHD: true,
+    },
+    {
+      title: 'Dream Story',
+      image: '../../public/Movie-poster/Dream Story.jpg',
+      isHD: true,
+    },
+    {
+      title: 'The Rise of the Red Hot Chili Peppers: Our Brother, Hillel',
+      image:
+        '../../public/Movie-poster/The Rise of the Red Hot Chili Peppers Our Brother, Hillel.jpg',
+      isHD: true,
+    },
+  ]
+
   return (
-    <section className="padding-block-100">
-      <div className="container">
+    <section className='padding-block-100'>
+      <div className='container'>
         <h3>LATEST MOVIES</h3>
-        <div className="box-wrapper">
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/Fallout The Ghoul Log.jpg" alt="" />
-                <h3>Fallout: The Ghoul Log</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">Fallout: The Ghoul Log</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/Frankenstein's Bride (2026).jpg" alt="" />
-                <h3>Frankenstein's Bride (2026)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">Frankenstein's Bride (2026)</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/Banduan (2025).jpg" alt="" />
-                <h3>Banduan (2025)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">Banduan (2025)</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/Waves (2024).jpg" alt="" />
-                <h3>Waves (2024)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">Waves (2024)</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/The Strangers Chapter 3.jpg" alt="" />
-                <h3>The Strangers: Chapter 3</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">The Strangers: Chapter 3</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/Amsterdamned II (2025).jpg" alt="" />
-                <h3>Amsterdamned II (2025)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">Amsterdamned II (2025)</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/All That's Left of You (2025).jpg" alt="" />
-                <h3>All That's Left of You (2025)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">All That's Left of You (2025)</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="index.html">
-            <div className="box-container">
-              <div className="box">
-                <img src="images/movie-poster/GOAT (2026).jpg" alt="" />
-                <h3>GOAT (2026)</h3>
-              </div>
-              <div className="badge">HD</div>
-              <div className="overlay">
-                <div className="play-bttn">&#9658;</div>
-                <h3 className="title">GOAT (2026)</h3>
-              </div>
-            </div>
-          </a>
+        <div className='box-wrapper'>
+          {latestMovies.map((detail, index) => (
+            <MovieCards
+              key={index}
+              image={detail.image}
+              title={detail.title}
+              isHD={detail.isHD}
+              isCAM={detail.isCAM}
+              // isEp={true}
+              // epNum={13}
+            />
+          ))}
         </div>
       </div>
     </section>
