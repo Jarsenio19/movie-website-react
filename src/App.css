@@ -932,7 +932,7 @@ main {
 .boxer-container {
   display: flex;
   border: 1px solid red;
-  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-100);
 }
 
 .boxer-details {
@@ -941,6 +941,10 @@ main {
 
 .details-container {
   display: flex;
+}
+
+.details-container ul {
+  list-style: none;
 }
 
 

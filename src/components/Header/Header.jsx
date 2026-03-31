@@ -1,4 +1,6 @@
 import React from 'react'
+import './Header'
+import { Link } from 'react-router'
 
 const Header = () => {
     return (
@@ -24,7 +26,7 @@ const Header = () => {
                         <nav className="primary-navigation" id="primary-navigation">
                             <ul aria-label="Primary" role="list" className="nav-list">
                                 <li>
-                                    <a>Home</a> {/* <Link to='/home'>Home</Link> */}
+                                    <Link to='/home'>Home</Link>
                                 </li>
 
                                 <li className="mega-parent">
