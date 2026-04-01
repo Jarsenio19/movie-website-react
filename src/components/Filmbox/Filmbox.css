@@ -78,20 +78,24 @@
 
 .boxer-container {
   display: flex;
-  height: 280px;
+  /* height: 280px; */
   padding: 10px;
   gap: 1rem;
   background-color: var(--clr-accent-150);
+  align-items: flex-start;
 
 }
 
 .box1 {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
 .box1 img {
-  object-fit: cover;
+  width: 150px;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -111,26 +115,24 @@
 
 
 .boxer-details {
-  width: 1500px;
   color: var(--clr-neutral-200);
+  flex: 1;
+  /* width: 1500px; */
 }
 
 .boxer-details>h2 {
-  padding: 0;
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .boxer-details>p {
   font-size: var(--fs-400);
-  padding-bottom: 50px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .details-container {
   display: flex;
-  gap: 5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 3rem;
 }
 
 .details-container ul {
@@ -151,7 +153,6 @@
 }
 
 .details-container span {
-
   background: gold;
   color: var(--clr-accent-1000);
   font-size: var(--fs-300);
@@ -161,23 +162,22 @@
 }
 
 .film-button {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .HD-bttn {
   border: none;
   border-radius: 5px;
-  padding: 11px 0 15px;
+  padding: 14px 0 15px;
   cursor: pointer;
   background-color: var(--clr-primary-400);
   font-size: var(--size-300);
   font-weight: var(--fw-regular);
   color: var(--clr-accent-100);
 
-  width: 280px;
+  width: 260px;
   height: 40px;
   margin: 3px;
 }

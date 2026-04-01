@@ -7,77 +7,77 @@ const LatestTvSeries = () => {
     {
       title: 'Invincible - Season 4',
       image: '../../public/Movie-poster/Invincible - Season 4.jpg',
-      isHD: true,
+      ep: 31,
     },
     {
       title: 'High Potential - Season 2',
       image: '../../public/Movie-poster/High Potential - Season 2.jpg',
-      isHD: true,
+      ep: 12,
     },
     {
       title: 'Daredevil: Born Again - Season 2',
       image: '../../public/Movie-poster/Daredevil Born Again - Season 2.jpg',
-      isHD: true,
+      ep: 13,
     },
     {
       title: 'Shrinking - Season 3',
       image: '../../public/Movie-poster/Shrinking - Season 3.jpg',
-      isHD: true,
+      ep: 24,
     },
     {
       title: 'Best Medicine - Season 1',
       image: '../../public/Movie-poster/Best Medicine - Season 1.jpg',
-      isHD: true,
+      ep: 23,
     },
     {
       title: 'NCIS - Season 23',
       image: '../../public/Movie-poster/NCIS - Season 23.jpg',
-      isHD: true,
+      ep: 12,
     },
     {
       title: 'Will Trent - Season 4',
       image: '../../public/Movie-poster/Will Trent - Season 4.jpg',
-      isHD: true,
+      ep: 10,
     },
     {
       title: 'NCIS: Origins - Season 2',
       image: '../../public/Movie-poster/NCIS Origins - Season 2.jpg',
-      isHD: true,
+      ep: 31,
     },
     {
       title: 'Memory of a Killer - Season 1',
       image: '../../public/Movie-poster/Memory of a Killer - Season 1.jpg',
-      isHD: true,
+      ep: 51,
     },
     {
       title: 'St Denis Medical - Season 2',
       image: '../../public/Movie-poster/St Denis Medical - Season 2.jpg',
-      isHD: true,
+      ep: 11,
     },
     {
       title: 'CIA - Season 1',
       image: '../../public/Movie-poster/CIA - Season 1.jpg',
-      isHD: true,
+      ep: 12,
     },
     {
       title: 'The Rookie - Season 8',
       image: '../../public/Movie-poster/The Rookie - Season 8.jpg',
-      isHD: true,
+      ep: 15,
     },
     {
       title: 'FBI - Season 8',
       image: '../../public/Movie-poster/FBI - Season 8.jpg',
-      isHD: true,
+      ep: 21,
     },
     {
       title: 'Watson - Season 2',
       image: '../../public/Movie-poster/Watson - Season 2.jpg',
-      isHD: true,
+      ep: 41,
     },
     {
       title: 'Rooster - Season 1',
       image: '../../public/Movie-poster/Rooster - Season 1.jpg',
-      isHD: true,
+      ep: 21,
     },
   ]
 
@@ -92,10 +92,8 @@ const LatestTvSeries = () => {
               key={index}
               image={detail.image}
               title={detail.title}
-              isHD={detail.isHD}
-              isCAM={detail.isCAM}
               isEp={true}
-              epNum={13}
+              epNum={detail?.ep}
             />
 
           ))}

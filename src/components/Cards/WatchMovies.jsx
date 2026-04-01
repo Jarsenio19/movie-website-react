@@ -172,8 +172,6 @@ const WatchMovies = () => {
               title={detail.title}
               isHD={detail.isHD}
               isCAM={detail.isCAM}
-              isEp={true}
-              epNum={13}
             />
 
           ))}
