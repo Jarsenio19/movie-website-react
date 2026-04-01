@@ -1,9 +1,9 @@
-import MovieCards from '../components/MovieCards'
+import React from 'react'
+import MovieCards from './MovieCards'
 
-const SuggestionCard = () => {
+const RelatedMovies = () => {
+  const relatedMovies = [
 
-
-  const suggestionMovies = [
     {
       title: 'GOAT (2026)',
       image: '../../public/Movie-poster/GOAT.jpg',
@@ -84,22 +84,21 @@ const SuggestionCard = () => {
       image: '../../public/Movie-poster/Predator Badlands.jpg',
       isHD: true,
     },
+
   ]
   return (
     <section className="padding-block-100">
-      <div className='container'>
-        <h3>SUGGESTIONS</h3>
+      <div className='container-movie-page'>
+        <h3>RELATED MOVIES</h3>
         <div className="box-wrapper">
-          {suggestionMovies.map((detail, index) => (
+          {relatedMovies.map((detail, index) => (
 
             <MovieCards
               key={index}
               image={detail.image}
               title={detail.title}
               isHD={detail.isHD}
-            // // isCAM={detail.isCAM}
-            // isEp={true}
-            // epNum={13}
+              isCAM={detail.isCAM}
             />
 
           ))}
@@ -110,4 +109,4 @@ const SuggestionCard = () => {
   )
 }
 
-export default SuggestionCard
+export default RelatedMovies

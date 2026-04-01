@@ -1,0 +1,123 @@
+.container>h3 {
+  color: var(--clr-primary-400);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+  margin-bottom: var(--size-700);
+}
+
+.box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 2rem;
+  padding-bottom: 1rem;
+
+}
+
+.box-container {
+  position: relative;
+  height: 100%;
+  border: none;
+}
+
+.box {
+  border: none;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.box img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom effect */
+
+.box:hover img {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: gold;
+  color: var(--clr-accent-1000);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+
+.badge1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: lightblue;
+  color: var(--clr-accent-1000);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+  padding: 4px 5px;
+  border-radius: 4px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.4s ease;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.box-container:hover .overlay {
+  opacity: 1;
+}
+
+.box h3 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+}
+
+.play-bttn {
+  width: 50px;
+  height: 50px;
+  background: var(--clr-primary-400);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-600);
+  color: var(--clr-accent-100);
+  transition: transform 0.3s ease;
+  margin: auto;
+}
+
+.title {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+}
+
+.box:hover .play-bttn {
+  transform: scale(1.1);
+}

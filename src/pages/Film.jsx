@@ -1,8 +1,7 @@
-import React from 'react'
-import Header from '../components/Header'
-import Filmbox from '../components/Filmbox'
-import RelatedMovies from '../components/RelatedMovies'
-import Footer from '../components/Footer'
+import Header from '../components/Header/Header'
+import Filmbox from '../components/Filmbox/Filmbox'
+import RelatedMovies from '../components/Cards/RelatedMovies'
+import Footer from '../components/Footer/Footer'
 
 const Film = () => {
   return (

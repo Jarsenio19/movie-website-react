@@ -1,5 +1,6 @@
 import React from 'react'
 import MovieCards from './MovieCards'
+import './Cards.css'
 
 const WatchTopIMDb = () => {
   const watchTopIMDb = [

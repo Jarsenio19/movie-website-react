@@ -1,5 +1,6 @@
 import React from 'react'
 import Description from './Description'
+import './Footer.css'
 
 const Footer = () => {
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
-import '../Carousel/CarouselStyle.css'
+import './CarouselStyle.css'
+import { Link } from 'react-router'
 
 const Carousel = () => {
   return (
@@ -15,7 +16,7 @@ const Carousel = () => {
             <li className="carousel-slide current-slide">
               <a>
                 <img className="carousel-image" src="../../../public/Movie-poster/Scream.jpg" alt="" />
-                <div className="carousel-details">
+                <Link to='/film'><div className="carousel-details">
                   <h2>Scream 7</h2>
                   <p>
                     <span className="carousel-badge">HD</span>  -  114 min Horror, Mystery, Crime
@@ -24,7 +25,8 @@ const Carousel = () => {
                     When a new Ghostface killer emerges in the quiet town where Sidney Prescott has built a new life, her darkest fears are realized as her daughter...
                   </p>
                   <button className="button1">Watch Now</button>
-                </div>
+
+                </div></Link>
 
               </a>
             </li>
@@ -41,7 +43,7 @@ const Carousel = () => {
           <img src="images/carousel/next.png" alt="" />
         </button>
       </div>
-    </section>
+    </section >
 
   )
 }

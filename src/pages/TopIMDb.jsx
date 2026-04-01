@@ -1,8 +1,7 @@
-import React from 'react'
-import Header from '../components/Header'
-import WatchTopIMDb from '../components/WatchTopIMDb'
-import Pagination from '../components/Pagination'
-import Footer from '../components/Footer'
+import Header from '../components/Header/Header'
+import WatchTopIMDb from '../components/Cards/WatchTopIMDb'
+import Pagination from '../components/Pagination/Pagination'
+import Footer from '../components/Footer/Footer'
 
 const TopIMDb = () => {
   return (

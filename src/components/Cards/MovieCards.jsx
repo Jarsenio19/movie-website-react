@@ -1,3 +1,8 @@
+import '../Hero/Hero.css'
+import { Link } from "react-router"
+import './Cards.css'
+
+
 const MovieCards = ({ image, title, isHD, isCAM, isEp, epNum }) => {
   return (
     <a>
@@ -11,10 +16,10 @@ const MovieCards = ({ image, title, isHD, isCAM, isEp, epNum }) => {
         {isCAM && <div className="badge">CAM</div>}
         {isEp && <div className="badge1">EP {epNum} </div>}
 
-        <div className="overlay">
+        <Link to='/film'><div className="overlay">
           <div className="play-bttn">&#9658;</div>
           <h3 className="title">{title}</h3>
-        </div>
+        </div></Link>
       </div>
     </a>
   )

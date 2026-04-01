@@ -1,0 +1,28 @@
+/* hero */
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.third-bttn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.third-bttn h2 {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 1rem;
+  max-width: 100%;
+
+}
+
+.third-bttn a {
+  text-decoration: none;
+}

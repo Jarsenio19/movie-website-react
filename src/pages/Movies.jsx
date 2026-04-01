@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import WatchMovies from '../components/WatchMovies'
-import Pagination from '../components/Pagination'
+import Header from '../components//Header/Header'
+import WatchMovies from '../components/Cards/WatchMovies'
+import Pagination from '../components/Pagination/Pagination'
+import Footer from '../components/Footer/Footer'
 
 const Movies = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
-import WatchTvSeries from '../components/WatchTvSeries'
-import Pagination from '../components/Pagination'
-import Footer from '../components/Footer'
+import Header from '../components/Header/Header'
+import WatchTvSeries from '../components/Cards/WatchTvSeries'
+import Pagination from '../components/Pagination/Pagination'
+import Footer from '../components//Footer/Footer'
 
 const TvSeries = () => {
   return (

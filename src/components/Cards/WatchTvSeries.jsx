@@ -1,87 +1,85 @@
-import MovieCards from "./MovieCards"
+import React from 'react'
+import MovieCards from './MovieCards'
+import './Cards.css'
 
-const WatchMovies = () => {
-  const watchMovies = [
+const WatchTvSeries = () => {
+  const watchTvSeries = [
     {
-      title: 'GOAT (2026)',
-      image: '../../public/Movie-poster/GOAT.jpg',
+      title: 'Invincible - Season 4',
+      image: '../../public/Movie-poster/Invincible - Season 4.jpg',
       isHD: true,
     },
     {
-      title: 'Send Help',
-      image: '../../public/Movie-poster/SendHelp.jpg',
+      title: 'High Potential - Season 2',
+      image: '../../public/Movie-poster/High Potential - Season 2.jpg',
       isHD: true,
     },
     {
-      title: 'Crime 101',
-      image: '../../public/Movie-poster/Crime101.jpg',
+      title: 'Daredevil: Born Again - Season 2',
+      image: '../../public/Movie-poster/Daredevil Born Again - Season 2.jpg',
       isHD: true,
     },
     {
-      title: 'The Bride!',
-      image: '../../public/Movie-poster/The Bride!.jpg',
+      title: 'Shrinking - Season 3',
+      image: '../../public/Movie-poster/Shrinking - Season 3.jpg',
       isHD: true,
     },
     {
-      title: 'Jurassic World: Rebirth',
-      image: '../../public/Movie-poster/Jurassic World Rebirth.jpg',
+      title: 'Best Medicine - Season 1',
+      image: '../../public/Movie-poster/Best Medicine - Season 1.jpg',
       isHD: true,
     },
     {
-      title: 'In the Blink of an Eye',
-      image: '../../public/Movie-poster/In the Blink of an Eye.jpg',
+      title: 'NCIS - Season 23',
+      image: '../../public/Movie-poster/NCIS - Season 23.jpg',
       isHD: true,
     },
     {
-      title: 'Shelter',
-      image: '../../public/Movie-poster/Shelter.jpg',
+      title: 'Will Trent - Season 4',
+      image: '../../public/Movie-poster/Will Trent - Season 4.jpg',
       isHD: true,
     },
     {
-      title: 'Firebreak',
-      image: '../../public/Movie-poster/Firebreak.jpg',
+      title: 'NCIS: Origins - Season 2',
+      image: '../../public/Movie-poster/NCIS Origins - Season 2.jpg',
       isHD: true,
     },
     {
-      title: '28 Years Later: The Bone Temple',
-      image: '../../public/Movie-poster/28 Years Later The Bone Temple.jpg',
+      title: 'Memory of a Killer - Season 1',
+      image: '../../public/Movie-poster/Memory of a Killer - Season 1.jpg',
       isHD: true,
     },
     {
-      title: 'Mercy',
-      image: '../../public/Movie-poster/Mercy.jpg',
+      title: 'St Denis Medical - Season 2',
+      image: '../../public/Movie-poster/St Denis Medical - Season 2.jpg',
       isHD: true,
     },
     {
-      title: 'Hamnet',
-      image: '../../public/Movie-poster/Hamnet.jpg',
+      title: 'CIA - Season 1',
+      image: '../../public/Movie-poster/CIA - Season 1.jpg',
       isHD: true,
     },
     {
-      title: 'The Secret Agent',
-      image: '../../public/Movie-poster/The Secret Agent.jpg',
+      title: 'The Rookie - Season 8',
+      image: '../../public/Movie-poster/The Rookie - Season 8.jpg',
       isHD: true,
     },
     {
-      title: 'The Rip',
-      image: '../../public/Movie-poster/The Rip.jpg',
+      title: 'FBI - Season 8',
+      image: '../../public/Movie-poster/FBI - Season 8.jpg',
       isHD: true,
     },
     {
-      title: 'Song Sung Blue',
-      image: '../../public/Movie-poster/Song Sung Blue.jpg',
+      title: 'Watson - Season 2',
+      image: '../../public/Movie-poster/Watson - Season 2.jpg',
       isHD: true,
     },
     {
-      title: 'One Battle After Another',
-      image: '../../public/Movie-poster/One Battle After Another.jpg',
+      title: 'Rooster - Season 1',
+      image: '../../public/Movie-poster/Rooster - Season 1.jpg',
       isHD: true,
     },
-    {
-      title: 'Predator: Badlands',
-      image: '../../public/Movie-poster/Predator Badlands.jpg',
-      isHD: true,
-    },
+
     {
       title: 'King Ivory',
       image: '../../public/Movie-poster/King Ivory.jpg',
@@ -159,11 +157,12 @@ const WatchMovies = () => {
     },
   ]
   return (
+
     <section className="padding-block-100">
       <div className='container'>
-        <h3>WATCH MOVIES</h3>
+        <h3>WATCH TV-SERIES</h3>
         <div className="box-wrapper">
-          {watchMovies.map((detail, index) => (
+          {watchTvSeries.map((detail, index) => (
 
             <MovieCards
               key={index}
@@ -172,7 +171,7 @@ const WatchMovies = () => {
               isHD={detail.isHD}
               isCAM={detail.isCAM}
               isEp={true}
-              epNum={13}
+              epNum={1}
             />
 
           ))}
@@ -180,7 +179,8 @@ const WatchMovies = () => {
         </div>
       </div>
     </section>
+
   )
 }
 
-export default WatchMovies
+export default WatchTvSeries

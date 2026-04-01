@@ -1,4 +1,5 @@
-import MovieCards from "../components/MovieCards"
+import MovieCards from "../Cards/MovieCards"
+import './Cards.css'
 
 const LatestTvSeries = () => {
 

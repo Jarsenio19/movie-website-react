@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Hero = () => {
   return (
@@ -18,11 +19,10 @@ const Hero = () => {
               <h2 className="fs-800 fw-semi-bold text-neutral-100 flow">
                 JaysonMovies - Just a better place for watching online movies for free!
               </h2>
-              <button className="button">
+              <Link to='/home'><button className="button">
                 <a>Go to Home page</a>
-              </button>
+              </button></Link>
             </div>
-
           </div>
         </div>
       </section>

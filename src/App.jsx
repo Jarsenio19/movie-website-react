@@ -1,4 +1,3 @@
-
 import './App.css'
 import Search from './pages/Search'
 import Home from './pages/Home'
