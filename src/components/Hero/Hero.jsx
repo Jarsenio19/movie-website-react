@@ -19,7 +19,7 @@ const Hero = () => {
               <h2 className="fs-800 fw-semi-bold text-neutral-100 flow">
                 JaysonMovies - Just a better place for watching online movies for free!
               </h2>
-              <Link to='/home'><button className="button">
+              <Link to='/home'><button className="button3">
                 <a>Go to Home page</a>
               </button></Link>
             </div>

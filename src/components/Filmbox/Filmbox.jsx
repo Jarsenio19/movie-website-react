@@ -32,25 +32,25 @@ const Filmbox = () => {
                   <a> Horror, Mystery, Crime</a>
                 </li>
                 <li> <strong>Actor:</strong>
-                  <a>Neve Campbell, Courteney Cox, Isabel May</a>
+                  <a> Neve Campbell, Courteney Cox, Isabel May</a>
                 </li>
-                <li><strong>Director:</strong>
-                  <a>Kevin Williamson</a>
+                <li><strong>Director: </strong>
+                  Kevin Williamson
                 </li>
                 <li><strong>Country:</strong>
-                  <a>United States</a>
+                  <a> United States</a>
                 </li>
               </ul>
             </div>
             <div>
               <ul>
-                <li><strong> Duration:</strong>
-                  <a></a>114 min</li>
+                <li><strong> Duration: </strong>
+                  114 min</li>
                 <li><strong>Quality:</strong>
-                  <a><span>HD</span></a>
+                  <span>HD</span>
                 </li>
                 <li><strong>Release:</strong>
-                  <a>2026</a>
+                  <a> 2026</a>
                 </li>
                 <li><strong>IMDb:</strong> -</li>
               </ul>
