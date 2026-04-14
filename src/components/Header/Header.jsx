@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import './HeaderStyle.css'
+import SearchInput from '../Common/SearchInput'
 
 const Header = () => {
     return (
@@ -84,17 +85,7 @@ const Header = () => {
 
                     </div>
 
-                    <div className="primary-bttn">
-                        <input
-                            className="display-sm-none display-md-inline-flex"
-                            type="text"
-                            placeholder="Search.."
-                        />
-                        <button className="button display-sm-none display-md-inline-flex">
-                            <img src="../../public/search.png" alt="" />
-                        </button>
-                    </div>
-
+                    <SearchInput />
                 </div> {/* heading-searchbox-ul */}
             </div> {/* container */}
         </header >
