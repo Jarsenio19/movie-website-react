@@ -6,6 +6,8 @@ import TvSeries from './pages/TvSeries'
 import TopIMDb from './pages/TopIMDb'
 import Film from './pages/Film'
 import { Routes, Route } from 'react-router'
+import SearchResult from './components/Common/SearchResult'
+import { MovieData } from './Data/MovieData'
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/tvseries' element={<TvSeries />} />
         <Route path='/topimdb' element={<TopIMDb />} />
         <Route path='/film' element={<Film />} />
+        <Route path='/search' element={<SearchResult />} />
+        <Route path='/data' element={<MovieData />} />
       </Routes>
     </>
   )

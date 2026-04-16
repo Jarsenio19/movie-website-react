@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import './HeaderStyle.css'
+import SearchInput from '../Common/SearchInput'
 
 const Header = () => {
     return (
@@ -33,7 +34,7 @@ const Header = () => {
                                     <a id="genresBtn">Genres</a>
                                     <div className="mega-menu" id="mega-menu">
                                         <div className="mega-column">
-                                            <a>Action</a>
+                                            {/* <a>Action</a>
                                             <a>Action & Adventure</a>
                                             <a>Adventure</a>
                                             <a>Animation</a>
@@ -41,10 +42,10 @@ const Header = () => {
                                             <a>Comedy</a>
                                             <a>Crime</a>
                                             <a>Documentary</a>
-                                            <a>Drama</a>
+                                            <a>Drama</a> */}
                                         </div>
                                         <div className="mega-column">
-                                            <a>Family</a>
+                                            {/* <a>Family</a>
                                             <a>Fantasy</a>
                                             <a>Film-Noir</a>
                                             <a>Game-Show</a>
@@ -52,10 +53,10 @@ const Header = () => {
                                             <a>Horror</a>
                                             <a>Kungfu</a>
                                             <a>Music</a>
-                                            <a>Mystery</a>
+                                            <a>Mystery</a> */}
                                         </div>
                                         <div className="mega-column">
-                                            <a>Mythological</a>
+                                            {/* <a>Mythological</a>
                                             <a>News</a>
                                             <a>Psychological</a>
                                             <a>Reality</a>
@@ -63,16 +64,16 @@ const Header = () => {
                                             <a>Sci-Fi</a>
                                             <a>Science Fiction</a>
                                             <a>Short</a>
-                                            <a>Sitcom</a>
+                                            <a>Sitcom</a> */}
                                         </div>
                                         <div className="mega-column">
-                                            <a>Sport</a>
+                                            {/* <a>Sport</a>
                                             <a>Talk-Show</a>
                                             <a>Thriller</a>
                                             <a>TV Movie</a>
                                             <a>TV Show</a>
                                             <a>War</a>
-                                            <a>Western</a>
+                                            <a>Western</a> */}
                                         </div>
                                     </div>
                                 </li>
@@ -83,17 +84,8 @@ const Header = () => {
                         </nav>
 
                     </div>
+                    <SearchInput />
 
-                    <div className="primary-bttn">
-                        <input
-                            className="display-sm-none display-md-inline-flex"
-                            type="text"
-                            placeholder="Search.."
-                        />
-                        <button className="button display-sm-none display-md-inline-flex">
-                            <img src="../../public/search.png" alt="" />
-                        </button>
-                    </div>
 
                 </div> {/* heading-searchbox-ul */}
             </div> {/* container */}

@@ -1,0 +1,39 @@
+.primary-bttn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.primary-bttn input {
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  padding: 10px 20px;
+  font-size: var(--fs-600);
+  flex: 1;
+  left: 20px;
+  width: 200px;
+
+}
+
+.primary-bttn button {
+
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: var(--fs-600);
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 38px;
+
+}
+
+
+@media(max-width: 70em) {
+  .primary-bttn {
+    display: none;
+  }
+}
