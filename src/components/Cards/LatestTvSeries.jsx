@@ -3,8 +3,6 @@ import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
 
 const LatestTvSeries = () => {
-
-
   return (
     <section className="padding-block-100">
       <div className='container'>
