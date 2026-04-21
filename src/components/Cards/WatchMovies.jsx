@@ -1,4 +1,4 @@
-import MovieCards from "../Cards/MovieCards"
+import MovieCard from "./MovieCard.jsx"
 import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
 
@@ -12,7 +12,7 @@ const WatchMovies = () => {
         <div className="box-wrapper">
           {MovieData.map((data, index) => (
 
-            <MovieCards
+            <MovieCard
               key={index}
               image={data.image}
               title={data.title}

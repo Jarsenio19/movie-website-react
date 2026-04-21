@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieCards from './MovieCards'
+import MovieCard from './MovieCard.jsx'
 import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
 
@@ -12,9 +12,9 @@ const WatchTvSeries = () => {
       <div className='container'>
         <h3>WATCH TV-SERIES</h3>
         <div className="box-wrapper">
-          {MoveiData.map((data, index) => (
+          {MovieData.map((data, index) => (
 
-            <MovieCards
+            <MovieCard
               key={index}
               image={data.image}
               title={data.title}

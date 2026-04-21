@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieCards from './MovieCards'
+import MovieCard from './MovieCard.jsx'
 import { MovieData } from '../../Data/MovieData.js'
 
 
@@ -11,7 +11,7 @@ const RelatedMovies = () => {
         <div className="box-wrapper">
           {MovieData.map((data, index) => (
 
-            <MovieCards
+            <MovieCard
               key={index}
               image={data.image}
               title={data.title}
