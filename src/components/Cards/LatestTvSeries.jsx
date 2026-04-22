@@ -5,27 +5,7 @@ import { useEffect, useState } from "react"
 
 
 const LatestTvSeries = () => {
-  const [movies, setMovies] = useState([])
-  useEffect(() => {
-    const fetchAPI = async () => {
-      try {
-        const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
-        const result = await jsonResponse.json()
-        const buildMovies = result.titles.map((item) => ({
-          id: item.id,
-          title: item.primaryTitle,
-          image: item.primaryImage?.url,
-          ...item,
-        }))
-        setMovies(buildMovies)
-      } catch (error) {
-        console.log('Handle later', error)
-      }
-    }
-    fetchAPI()
-  }, [])
 
-  const findSeries = movies.filter((movie) => movie.type.toLowerCase() === 'tvseries')
 
   return (
     <section className="padding-block-100">

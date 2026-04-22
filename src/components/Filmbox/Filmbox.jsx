@@ -1,3 +1,4 @@
+import { useParams } from 'react-router'
 import './Filmbox.css'
 import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
@@ -61,13 +62,17 @@ const Filmbox = () => {
                 <li> <strong>Genre:</strong>
                   <a>{findMovie?.genres}</a>
                 </li>
-                <li> <strong>Actor:</strong>
+                <li>
+                  {' '}
+                  <strong>Actor:</strong>
                   <a> Neve Campbell, Courteney Cox, Isabel May</a>
                 </li>
-                <li><strong>Director: </strong>
+                <li>
+                  <strong>Director: </strong>
                   Kevin Williamson
                 </li>
-                <li><strong>Country:</strong>
+                <li>
+                  <strong>Country:</strong>
                   <a> United States</a>
                 </li>
               </ul>
@@ -82,7 +87,9 @@ const Filmbox = () => {
                 <li><strong>Release:</strong>
                   <a> {findMovie?.startYear}</a>
                 </li>
-                <li><strong>IMDb:</strong> -</li>
+                <li>
+                  <strong>IMDb:</strong> -
+                </li>
               </ul>
             </div>
           </div>
@@ -98,9 +105,7 @@ const Filmbox = () => {
           {/* mask, artificial intelligence (ai), sequel, murder, serial killer */}
         </p>
       </div>
-    </div >
-
-
+    </div>
   )
 }
 
