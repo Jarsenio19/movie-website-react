@@ -21,10 +21,10 @@
 
   border: none;
   border-radius: 0 8px 8px 0;
-  padding: 10px;
+  padding: 10px 10px 14px 10px;
   cursor: pointer;
   font-size: var(--fs-600);
-  flex-shrink: 0;
+
 
   width: 40px;
   height: 38px;
