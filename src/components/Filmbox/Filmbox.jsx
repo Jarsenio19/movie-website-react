@@ -1,6 +1,5 @@
 import { useParams } from 'react-router'
 import './Filmbox.css'
-import { useParams } from 'react-router'
 import { useEffect, useState } from 'react'
 
 const Filmbox = () => {
@@ -15,8 +14,6 @@ const Filmbox = () => {
           id: item.id,
           title: item.primaryTitle,
           image: item.primaryImage.url,
-          // genres: item.genres,
-          // plot: item.plot,
           ...item,
         }))
         setMovies(buildMovies)
@@ -29,8 +26,6 @@ const Filmbox = () => {
 
   const findMovie = movies.find((movie) => movie.id === id)
   console.log(findMovie);
-
-
 
   return (
     <div className='container-movie-page'>

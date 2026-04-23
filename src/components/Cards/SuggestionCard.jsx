@@ -14,6 +14,7 @@ const SuggestionCard = () => {
           id: item.id,
           title: item.primaryTitle,
           image: item.primaryImage.url,
+          ...item,
         }))
         setMovies(buildMovies)
       } catch (error) {
@@ -23,20 +24,22 @@ const SuggestionCard = () => {
     fetchAPI()
   }, [])
 
+  const suggestMovies = movies.filter((movie) => movie.rating?.aggregateRating > 8)
+
 
   return (
     <section className='padding-block-100'>
       <div className='container'>
         <h3>SUGGESTIONS</h3>
         <div className='box-wrapper'>
-          {movies?.map((data, index) => (
-            <MovieCards
+          {suggestMovies?.map((data, index) => (
+            <MovieCard
               key={index}
               id={data.id}
               image={data.image}
               title={data.title}
-              isHD={data.isHD}
-              isCAM={data.isCAM}
+            // isHD={data.isHD}
+            // isCAM={data.isCAM}
             />
           ))}
         </div>

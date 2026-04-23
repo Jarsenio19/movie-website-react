@@ -7,12 +7,7 @@
 
 .box-wrapper {
   display: grid;
-<<<<<<< HEAD
   grid-template-columns: repeat(auto-fit, minmax(170px, 150px));
-=======
-  grid-template-columns: repeat(auto-fill, minmax(170px, 250px));
-  justify-content: center;
->>>>>>> 37d5255898d41984716e77ccefef658d18aeaf3e
   gap: 2rem;
   padding-bottom: 1rem;
 }
