@@ -6,9 +6,12 @@ import { useEffect, useState } from "react"
 
 const WatchMovies = () => {
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchAPI = async () => {
       try {
+        setLoading(true)
         const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
         const result = await jsonResponse.json()
         const buildMovies = result.titles.map((item) => ({
@@ -19,8 +22,9 @@ const WatchMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Handle Later', error);
+        console.log('Something went wrong while fetching movie', error);
       }
+      setLoading(false)
     }
     fetchAPI()
   }, [])
@@ -32,6 +36,9 @@ const WatchMovies = () => {
       <div className='container'>
         <h3>WATCH MOVIES</h3>
         <div className="box-wrapper">
+          {loading && <h1>LOADING....</h1>}
+          {error && <p>{error}</p>}
+
           {watchMovies.map((data, index) => (
 
             <MovieCard

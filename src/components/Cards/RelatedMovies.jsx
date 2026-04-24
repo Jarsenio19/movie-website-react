@@ -5,9 +5,12 @@ import { MovieData } from '../../Data/MovieData.js'
 
 const RelatedMovies = () => {
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchAPI = async () => {
       try {
+        setLoading(false)
         const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
         const result = await jsonResponse.json()
         const buildMovies = result.titles.map((item) => ({
@@ -18,9 +21,9 @@ const RelatedMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Handle later', error);
-
+        console.log('Something went wrong while fetching movie', error);
       }
+      setLoading(true)
     }
     fetchAPI()
   }, [])
@@ -35,6 +38,8 @@ const RelatedMovies = () => {
       <div className='container-movie-page'>
         <h3>RELATED MOVIES</h3>
         <div className="box-wrapper">
+          {error && <p>{error}</p>}
+
           {relatedMovies.map((data, index) => (
 
             <MovieCard

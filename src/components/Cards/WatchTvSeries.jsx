@@ -6,6 +6,7 @@ import { MovieData } from '../../Data/MovieData.js'
 
 const WatchTvSeries = () => {
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
   useEffect(() => {
     const fetchAPI = async () => {
       try {
@@ -19,7 +20,7 @@ const WatchTvSeries = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Handle later', error)
+        console.log('Something went wrong while fetching movie', error)
       }
     }
     fetchAPI()
@@ -33,6 +34,8 @@ const WatchTvSeries = () => {
       <div className='container'>
         <h3>WATCH TV-SERIES</h3>
         <div className="box-wrapper">
+          {error && <p>{error}</p>}
+
           {watchMovies.map((data, index) => (
 
             <MovieCard

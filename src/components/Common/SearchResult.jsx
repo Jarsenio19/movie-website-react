@@ -22,6 +22,7 @@ const SearchResult = () => {
         const buildMovies = result.titles.map((item) => ({
           title: item.primaryTitle,
           image: item.primaryImage.url,
+          ...item,
         }))
         setMovies(buildMovies)
       } catch (error) {
