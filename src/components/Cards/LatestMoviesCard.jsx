@@ -2,6 +2,7 @@ import MovieCard from "./MovieCard.jsx"
 import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
+import LoadingScreen from "../Common/LoadingScreen.jsx"
 
 
 
@@ -38,6 +39,7 @@ const LatestMoviesCard = () => {
       <div className='container'>
         <h3>LATEST MOVIES</h3>
         <div className="box-wrapper">
+          {loading && <LoadingScreen />}
           {error && <h1>{error}</h1>}
 
           {latestMovie?.map((data, index) => (

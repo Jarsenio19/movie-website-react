@@ -2,6 +2,7 @@ import MovieCard from "./MovieCard.jsx"
 import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
+import LoadingScreen from "../Common/LoadingScreen.jsx"
 
 
 const WatchMovies = () => {
@@ -32,28 +33,31 @@ const WatchMovies = () => {
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
 
   return (
-    <section className="padding-block-100">
-      <div className='container'>
-        <h3>WATCH MOVIES</h3>
-        <div className="box-wrapper">
-          {loading && <div className="loader">LOADING....</div>}
-          {error && <p>{error}</p>}
+    <main>
+      <section className="padding-block-100">
+        <div className='container'>
+          <h3>WATCH MOVIES</h3>
+          <div className="box-wrapper">
+            {loading && <LoadingScreen />}
 
-          {watchMovies.map((data, index) => (
+            {error && <p>{error}</p>}
 
-            <MovieCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              isHD={data.isHD}
-              isCAM={data.isCAM}
-            />
+            {watchMovies.map((data, index) => (
 
-          ))}
+              <MovieCard
+                key={index}
+                image={data.image}
+                title={data.title}
+                isHD={data.isHD}
+                isCAM={data.isCAM}
+              />
 
+            ))}
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 

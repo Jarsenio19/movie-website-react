@@ -1,6 +1,6 @@
 import MovieCard from './MovieCard.jsx'
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
+import LoadingScreen from '../Common/LoadingScreen.jsx'
 import { useEffect, useState } from 'react'
 
 
@@ -33,27 +33,29 @@ const WatchTopIMDb = () => {
   //  && movie.rating?.aggregateRating >= 6)
 
   return (
-    <section className="padding-block-100">
-      <div className='container'>
-        <h3>TOP IMDB</h3>
-        <div className="box-wrapper">
-          {loading && <h1>LOADING...</h1>}
-          {error && <p>{error}</p>}
+    <main>
+      <section className="padding-block-100">
+        <div className='container'>
+          <h3>TOP IMDB</h3>
+          <div className="box-wrapper">
+            {loading && <LoadingScreen />}
+            {error && <p>{error}</p>}
 
-          {watchTopImdb.map((data, index) => (
-            <MovieCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              isHD={data.isHD}
-              isCAM={data.isCAM}
-            />
+            {watchTopImdb.map((data, index) => (
+              <MovieCard
+                key={index}
+                image={data.image}
+                title={data.title}
+                isHD={data.isHD}
+                isCAM={data.isCAM}
+              />
 
-          ))}
+            ))}
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 

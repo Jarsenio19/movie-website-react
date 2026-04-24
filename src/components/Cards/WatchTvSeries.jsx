@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard.jsx'
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
+import LoadingScreen from '../Common/LoadingScreen.jsx'
 
 
 const WatchTvSeries = () => {
@@ -32,29 +32,29 @@ const WatchTvSeries = () => {
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'tvminiseries' || movie.type.toLowerCase() === 'tvseries')
 
   return (
+    <main>
+      <section className="padding-block-100">
+        <div className='container'>
+          <h3>WATCH TV-SERIES</h3>
+          <div className="box-wrapper">
+            {loading && <LoadingScreen />}
+            {error && <p>{error}</p>}
 
-    <section className="padding-block-100">
-      <div className='container'>
-        <h3>WATCH TV-SERIES</h3>
-        <div className="box-wrapper">
-          {loading && <h1>LOADING...</h1>}
-          {error && <p>{error}</p>}
+            {watchMovies.map((data, index) => (
+              <MovieCard
+                key={index}
+                image={data.image}
+                title={data.title}
+                isEp={true}
+                epNum={data?.ep}
+              />
 
-          {watchMovies.map((data, index) => (
-            <MovieCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              isEp={true}
-              epNum={data?.ep}
-            />
+            ))}
 
-          ))}
-
+          </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+    </main>
   )
 }
 

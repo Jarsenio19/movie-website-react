@@ -1,6 +1,7 @@
 import { useParams } from 'react-router'
 import './Filmbox.css'
 import { useEffect, useState } from 'react'
+import LoadingScreen from '../Common/LoadingScreen'
 
 const Filmbox = () => {
   const [movies, setMovies] = useState([])
@@ -22,7 +23,6 @@ const Filmbox = () => {
         setMovies(buildMovies)
       } catch (error) {
         setError('Something went wrong while fetching movies.')
-        { error && <p>{error}</p> }
       }
       setLoading(false)
     }
@@ -33,6 +33,9 @@ const Filmbox = () => {
 
   return (
     <div className='container-movie-page'>
+      {loading && <LoadingScreen />}
+      {error && <p>{error}</p>}
+
       <ul className='semi-nav-container'>
         <li><a>Home</a> /</li>
         <li><a>{findMovie?.type}</a>  /</li>
