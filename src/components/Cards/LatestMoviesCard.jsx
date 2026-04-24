@@ -4,8 +4,6 @@ import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
 import LoadingScreen from "../Common/LoadingScreen.jsx"
 
-
-
 const LatestMoviesCard = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')

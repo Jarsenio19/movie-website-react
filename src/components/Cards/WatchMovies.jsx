@@ -23,7 +23,7 @@ const WatchMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        setError('Something went wrong while fetching movie', error);
+        setError('Something went wrong while fetching movie');
       }
       setLoading(false)
     }
