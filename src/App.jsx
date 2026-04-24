@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router'
 import SearchResult from './components/Common/SearchResult'
 import { MovieData } from './Data/MovieData'
 
+// OFFICIAL API: api.imdbapi.dev
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/tvseries' element={<TvSeries />} />
         <Route path='/topimdb' element={<TopIMDb />} />
         <Route path='/film' element={<Film />} />
+        <Route path='/film/:id' element={<Film />} />
         <Route path='/search' element={<SearchResult />} />
         <Route path='/data' element={<MovieData />} />
       </Routes>

@@ -23,10 +23,11 @@ const SearchInput = () => {
           type="text"
           placeholder="Search.."
         />
+
+        <button className="button display-sm-none display-md-inline-flex">
+          <img src="../../public/search.png" alt="" />
+        </button>
       </form>
-      <button className="button display-sm-none display-md-inline-flex">
-        <img src="../../public/search.png" alt="" />
-      </button>
     </div>
   )
 }

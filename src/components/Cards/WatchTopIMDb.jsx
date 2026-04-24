@@ -1,31 +1,61 @@
-import React from 'react'
-import MovieCards from './MovieCards'
+import MovieCard from './MovieCard.jsx'
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
+import LoadingScreen from '../Common/LoadingScreen.jsx'
+import { useEffect, useState } from 'react'
 
 
 const WatchTopIMDb = () => {
+  const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    const fetchAPI = async () => {
+      try {
+        setLoading(true)
+        const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
+        const result = await jsonResponse.json()
+        const buildMovies = result.titles.map((item) => ({
+          id: item.id,
+          title: item.primaryTitle,
+          image: item.primaryImage.url,
+          ...item,
+        }))
+        setMovies(buildMovies)
+      } catch (error) {
+        setError('Something went wrong while fetching movie');
+      }
+      setLoading(false)
+    }
+    fetchAPI()
+  }, [])
+
+  const watchTopImdb = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
+  //  && movie.rating?.aggregateRating >= 6)
 
   return (
-    <section className="padding-block-100">
-      <div className='container'>
-        <h3>TOP IMDB</h3>
-        <div className="box-wrapper">
-          {MovieData.map((data, index) => (
+    <main>
+      <section className="padding-block-100">
+        <div className='container'>
+          <h3>TOP IMDB</h3>
+          <div className="box-wrapper">
+            {loading && <LoadingScreen />}
+            {error && <p>{error}</p>}
 
-            <MovieCards
-              key={index}
-              image={data.image}
-              title={data.title}
-              isHD={data.isHD}
-              isCAM={data.isCAM}
-            />
+            {watchTopImdb.map((data, index) => (
+              <MovieCard
+                key={index}
+                image={data.image}
+                title={data.title}
+                isHD={data.isHD}
+                isCAM={data.isCAM}
+              />
 
-          ))}
+            ))}
 
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 
