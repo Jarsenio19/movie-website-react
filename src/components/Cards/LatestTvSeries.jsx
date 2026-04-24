@@ -23,7 +23,6 @@ const LatestTvSeries = () => {
         setMovies(buildMovies)
       } catch (error) {
         setError('Something went wrong while fetching movies.')
-        { error && <p>{error}</p> }
       }
       setLoading(false)
     }
@@ -38,6 +37,8 @@ const LatestTvSeries = () => {
       <div className='container'>
         <h3>LATEST TV SERIES</h3>
         <div className="box-wrapper">
+          {error && <h1>{error}</h1>}
+
           {latestTvSeries?.map((data, index) => (
             <MovieCard
               key={index}

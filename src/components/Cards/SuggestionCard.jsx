@@ -22,7 +22,6 @@ const SuggestionCard = () => {
         setMovies(buildMovies)
       } catch (error) {
         setError('Something went wrong while fetching movie.')
-        { error && <p>{error}</p> }
       }
       setLoading(false)
     }
@@ -37,6 +36,8 @@ const SuggestionCard = () => {
       <div className='container'>
         <h3>SUGGESTIONS</h3>
         <div className='box-wrapper'>
+          {error && <h1>{error}</h1>}
+
           {suggestMovies?.map((data, index) => (
             <MovieCard
               key={index}
