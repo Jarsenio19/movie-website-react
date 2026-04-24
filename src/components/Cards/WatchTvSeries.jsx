@@ -7,9 +7,11 @@ import { MovieData } from '../../Data/MovieData.js'
 const WatchTvSeries = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchAPI = async () => {
       try {
+        setLoading(true)
         const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
         const result = await jsonResponse.json()
         const buildMovies = result.titles.map((item) => ({
@@ -20,8 +22,9 @@ const WatchTvSeries = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Something went wrong while fetching movie', error)
+        setError('Something went wrong while fetching movie', error)
       }
+      setLoading(false)
     }
     fetchAPI()
   }, [])
@@ -34,10 +37,10 @@ const WatchTvSeries = () => {
       <div className='container'>
         <h3>WATCH TV-SERIES</h3>
         <div className="box-wrapper">
+          {loading && <h1>LOADING...</h1>}
           {error && <p>{error}</p>}
 
           {watchMovies.map((data, index) => (
-
             <MovieCard
               key={index}
               image={data.image}

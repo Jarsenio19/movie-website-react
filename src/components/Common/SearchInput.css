@@ -14,7 +14,6 @@
   flex: 1;
   left: 20px;
   width: 200px;
-
 }
 
 .primary-bttn button {
@@ -24,12 +23,11 @@
   padding: 10px 10px 14px 10px;
   cursor: pointer;
   font-size: var(--fs-600);
-
-
   width: 40px;
   height: 38px;
-
 }
+
+
 
 
 @media(max-width: 70em) {

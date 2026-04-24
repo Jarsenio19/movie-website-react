@@ -22,7 +22,7 @@ const WatchTopIMDb = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Something went wrong while fetching movie', error);
+        setError('Something went wrong while fetching movie', error);
       }
       setLoading(false)
     }

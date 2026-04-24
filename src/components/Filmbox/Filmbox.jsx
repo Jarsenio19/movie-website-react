@@ -30,7 +30,6 @@ const Filmbox = () => {
   }, [])
 
   const findMovie = movies.find((movie) => movie.id === id)
-  console.log(findMovie);
 
   return (
     <div className='container-movie-page'>

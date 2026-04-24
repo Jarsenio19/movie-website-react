@@ -22,7 +22,7 @@ const WatchMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Something went wrong while fetching movie', error);
+        setError('Something went wrong while fetching movie', error);
       }
       setLoading(false)
     }
@@ -36,7 +36,7 @@ const WatchMovies = () => {
       <div className='container'>
         <h3>WATCH MOVIES</h3>
         <div className="box-wrapper">
-          {loading && <h1>LOADING....</h1>}
+          {loading && <div className="loader">LOADING....</div>}
           {error && <p>{error}</p>}
 
           {watchMovies.map((data, index) => (

@@ -21,7 +21,7 @@ const RelatedMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Something went wrong while fetching movie', error);
+        setError('Something went wrong while fetching movie', error);
       }
       setLoading(true)
     }
