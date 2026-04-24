@@ -5,9 +5,12 @@ import { useEffect, useState } from 'react'
 
 const SuggestionCard = () => {
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchAPI = async () => {
       try {
+        setLoading(true)
         const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
         const result = await jsonResponse.json()
         const buildMovies = result.titles.map((item) => ({
@@ -18,8 +21,10 @@ const SuggestionCard = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Handle later', error)
+        setError('Something went wrong while fetching movie.')
+        { error && <p>{error}</p> }
       }
+      setLoading(false)
     }
     fetchAPI()
   }, [])
@@ -38,8 +43,6 @@ const SuggestionCard = () => {
               id={data.id}
               image={data.image}
               title={data.title}
-            // isHD={data.isHD}
-            // isCAM={data.isCAM}
             />
           ))}
         </div>

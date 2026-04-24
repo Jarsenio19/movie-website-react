@@ -4,11 +4,15 @@ import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
 
 
+
 const LatestMoviesCard = () => {
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     const fetchAPI = async () => {
       try {
+        setLoading(true)
         const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
         const result = await jsonResponse.json()
         const buildMovies = result.titles.map((item) => ({
@@ -19,8 +23,10 @@ const LatestMoviesCard = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        console.log('Handle later', error);
+        setError('Something went wrong while fetching movies.')
+        { error && <p>{error}</p> }
       }
+      setLoading(false)
     }
     fetchAPI()
   }, [])
@@ -40,9 +46,6 @@ const LatestMoviesCard = () => {
               id={data.id}
               image={data.image}
               title={data.title}
-            // isHD={data.isHD}
-            // isCAM={data.isCAM}
-
             />
 
           ))}
