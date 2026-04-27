@@ -10,6 +10,7 @@ const WatchMovies = () => {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   useEffect(() => {
+
     const fetchAPI = async () => {
       try {
         setLoading(true)
@@ -29,6 +30,8 @@ const WatchMovies = () => {
     }
     fetchAPI()
   }, [])
+
+
 
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
 

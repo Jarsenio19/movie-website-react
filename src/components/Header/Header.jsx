@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import './HeaderStyle.css'
 import SearchInput from '../Common/SearchInput'
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = (e) => {
+        e.stopPropagation()
+        setIsOpen(prev => !prev)
+    }
+
+    // Close when clicking outside
+    useEffect(() => {
+        const handleClickOutside = () => setIsOpen(false)
+
+        document.addEventListener('click', handleClickOutside)
+        return () => document.removeEventListener('click', handleClickOutside)
+    }, [])
+
     return (
         <header className="primary-header">
             <div className="container">
@@ -28,58 +44,58 @@ const Header = () => {
 
                             <ul aria-label="Primary" role="list" className="nav-list">
 
-                                <Link to='/home'><li>Home</li></Link>
+                                <li><Link to='/home'>Home</Link></li>
 
-                                <li className="mega-parent">
-                                    <a id="genresBtn">Genres</a>
+                                <li
+                                    className={`mega-parent ${isOpen ? 'active' : ''}`}
+                                    onClick={toggleMenu}> <span>Genres</span>
                                     <div className="mega-menu" id="mega-menu">
                                         <div className="mega-column">
-                                            {/* <a>Action</a>
-                                            <a>Action & Adventure</a>
-                                            <a>Adventure</a>
-                                            <a>Animation</a>
-                                            <a>Biography</a>
-                                            <a>Comedy</a>
-                                            <a>Crime</a>
-                                            <a>Documentary</a>
-                                            <a>Drama</a> */}
+                                            <Link to="/genre/action">Action</Link>
+                                            <Link to="/genre/adventure">Adventure</Link>
+                                            <Link to="/genre/animation">Animation</Link>
+                                            <Link to="/genre/biography">Biography</Link>
+                                            <Link to="/genre/comedy">Comedy</Link>
+                                            <Link to="/genre/crime">Crime</Link>
+                                            <Link to="/genre/Documentary">Documentary</Link>
+                                            <Link to="/genre/Drama">Drama</Link>
                                         </div>
                                         <div className="mega-column">
-                                            {/* <a>Family</a>
-                                            <a>Fantasy</a>
-                                            <a>Film-Noir</a>
-                                            <a>Game-Show</a>
-                                            <a>History</a>
-                                            <a>Horror</a>
-                                            <a>Kungfu</a>
-                                            <a>Music</a>
-                                            <a>Mystery</a> */}
+                                            <Link to="/genre/Family">Family</Link>
+                                            <Link to="/genre/Fantasy">Fantasy</Link>
+                                            <Link to="/genre/Film-Noir">Film-Noir</Link>
+                                            <Link to="/genre/Game-Show">Game-Show</Link>
+                                            <Link to="/genre/History">History</Link>
+                                            <Link to="/genre/Horror">Horror</Link>
+                                            <Link to="/genre/Kungfu">Kungfu</Link>
+                                            <Link to="/genre/Music">Music</Link>
+                                            <Link to="/genre/Mystery">Mystery</Link>
                                         </div>
                                         <div className="mega-column">
-                                            {/* <a>Mythological</a>
-                                            <a>News</a>
-                                            <a>Psychological</a>
-                                            <a>Reality</a>
-                                            <a>Romance</a>
-                                            <a>Sci-Fi</a>
-                                            <a>Science Fiction</a>
-                                            <a>Short</a>
-                                            <a>Sitcom</a> */}
+                                            <Link to="/genre/Mythological">Mythological</Link>
+                                            <Link to="/genre/News">News</Link>
+                                            <Link to="/genre/Psychological">Psychological</Link>
+                                            <Link to="/genre/Reality">Reality</Link>
+                                            <Link to="/genre/Romance">Romance</Link>
+                                            <Link to="/genre/Sci-Fi">Sci-Fi</Link>
+                                            <Link to="/genre/Science Fiction">Science Fiction</Link>
+                                            <Link to="/genre/Short">Short</Link>
+                                            <Link to="/genre/Sitcom">Sitcom</Link>
                                         </div>
                                         <div className="mega-column">
-                                            {/* <a>Sport</a>
-                                            <a>Talk-Show</a>
-                                            <a>Thriller</a>
-                                            <a>TV Movie</a>
-                                            <a>TV Show</a>
-                                            <a>War</a>
-                                            <a>Western</a> */}
+                                            <Link to="/genre/Sport">Sport</Link>
+                                            <Link to="/genre/Talk-Show">Talk-Show</Link>
+                                            <Link to="/genre/Thriller">Thriller</Link>
+                                            <Link to="/genre/TV Movie">TV Movie</Link>
+                                            <Link to="/genre/TV Show">TV Show</Link>
+                                            <Link to="/genre/War">War</Link>
+                                            <Link to="/genre/">Western</Link>
                                         </div>
                                     </div>
                                 </li>
-                                <Link to='/movies'><li>Movies</li></Link>
-                                <Link to='/tvseries'><li>TV-Series</li></Link>
-                                <Link to='/topimdb'><li>Top IMDb</li></Link>
+                                <li><Link to='/movies'>Movies</Link></li>
+                                <li><Link to='/tvseries'>TV-Series</Link></li>
+                                <li><Link to='/topimdb'>Top IMDb</Link></li>
                             </ul>
                         </nav>
 
