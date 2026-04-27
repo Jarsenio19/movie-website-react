@@ -1,11 +1,8 @@
-import MovieCard from "./MovieCard.jsx"
-import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
-import { useEffect, useState } from "react"
-import LoadingScreen from "../Common/LoadingScreen.jsx"
+import React, { useEffect, useState } from 'react'
+import LoadingScreen from '../Common/LoadingScreen'
+import MovieCard from './MovieCard'
 
-
-const WatchMovies = () => {
+const ActionCard = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -31,29 +28,33 @@ const WatchMovies = () => {
     fetchAPI()
   }, [])
 
+  const actionCard = movies.filter((movie) =>
+    movie.genres?.some((genre) =>
+      genre.toLowerCase() === "action"
+    )
+  )
 
+  // DOUBLE CHECK!!!
 
-  const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
 
   return (
     <main>
       <section className="padding-block-100">
         <div className='container'>
-          <h3>WATCH MOVIES</h3>
+          <h3>ACTION MOVIES</h3>
           <div className="box-wrapper">
             {loading && <LoadingScreen />}
 
             {error && <p>{error}</p>}
 
-            {watchMovies.map((data, index) => (
+
+            {actionCard?.map((data, index) => (
 
               <MovieCard
                 key={index}
                 id={data.id}
                 image={data.image}
                 title={data.title}
-                isHD={data.isHD}
-                isCAM={data.isCAM}
               />
 
             ))}
@@ -62,7 +63,8 @@ const WatchMovies = () => {
         </div>
       </section>
     </main>
+
   )
 }
 
-export default WatchMovies
+export default ActionCard

@@ -44,18 +44,18 @@ const Header = () => {
 
                             <ul aria-label="Primary" role="list" className="nav-list">
 
-                                <li><Link to='/home'>Home</Link></li>
+                                <Link to='/home'> <li>Home</li></Link>
 
                                 <li
                                     className={`mega-parent ${isOpen ? 'active' : ''}`}
                                     onClick={toggleMenu}> <span>Genres</span>
                                     <div className="mega-menu" id="mega-menu">
                                         <div className="mega-column">
-                                            <Link to="/genre/action">Action</Link>
-                                            <Link to="/genre/adventure">Adventure</Link>
+                                            <Link to="/actionmovies">Action</Link>
+                                            <Link to="/adventure&action">Action & Adventure</Link>
                                             <Link to="/genre/animation">Animation</Link>
-                                            <Link to="/genre/biography">Biography</Link>
-                                            <Link to="/genre/comedy">Comedy</Link>
+                                            <Link to="/biography">Biography</Link>
+                                            <Link to="/comedy">Comedy</Link>
                                             <Link to="/genre/crime">Crime</Link>
                                             <Link to="/genre/Documentary">Documentary</Link>
                                             <Link to="/genre/Drama">Drama</Link>
@@ -93,9 +93,9 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li><Link to='/movies'>Movies</Link></li>
-                                <li><Link to='/tvseries'>TV-Series</Link></li>
-                                <li><Link to='/topimdb'>Top IMDb</Link></li>
+                                <Link to='/movies'><li>Movies</li></Link>
+                                <Link to='/tvseries'> <li>TV-Series</li></Link>
+                                <Link to='/topimdb'>  <li>Top IMDb</li></Link>
                             </ul>
                         </nav>
 

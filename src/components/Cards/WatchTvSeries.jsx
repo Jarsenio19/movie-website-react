@@ -43,6 +43,7 @@ const WatchTvSeries = () => {
             {watchMovies.map((data, index) => (
               <MovieCard
                 key={index}
+                id={data.id}
                 image={data.image}
                 title={data.title}
                 isEp={true}

@@ -44,6 +44,7 @@ const WatchTopIMDb = () => {
             {watchTopImdb.map((data, index) => (
               <MovieCard
                 key={index}
+                id={data.id}
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}
