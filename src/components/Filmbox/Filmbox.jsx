@@ -65,17 +65,19 @@ const Filmbox = () => {
                   <a>{findMovie?.genres}</a>
                 </li>
                 <li>
-                  {' '}
+                  {/* No data is accessible to API */}
                   <strong>Actor:</strong>
-                  <a> Neve Campbell, Courteney Cox, Isabel May</a>
+                  <a> N/A</a>
                 </li>
                 <li>
+                  {/* No data is accessible to API */}
                   <strong>Director: </strong>
-                  Kevin Williamson
+                  N/A
                 </li>
                 <li>
+                  {/* No data is accessible to API */}
                   <strong>Country:</strong>
-                  <a> United States</a>
+                  <a> N/A</a>
                 </li>
               </ul>
             </div>
@@ -83,7 +85,7 @@ const Filmbox = () => {
               <ul>
                 <li><strong> Duration: </strong>
                   {findMovie?.runtimeSeconds} sec</li>
-                <li><strong>Rating:</strong>
+                <li><strong>Rating: </strong>
                   <span>{findMovie?.rating?.aggregateRating} </span>
                 </li>
                 <li><strong>Release:</strong>

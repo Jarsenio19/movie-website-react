@@ -35,7 +35,7 @@ const Header = () => {
                             aria-controls="primary-navigation"
                             aria-expanded="false"
                         >
-                            <img className="icon-hamburger" src="images/menus.png" alt="" aria-hidden="true" />
+                            <img className="icon-hamburger" src="../public/menus.png" alt="" aria-hidden="true" />
                             <img className="icon-close" src="images/close.png" alt="" aria-hidden="true" />
                             <span className="visually-hidden">Menu</span>
                         </button>

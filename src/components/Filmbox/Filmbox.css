@@ -32,8 +32,8 @@
 .video-container img {
   width: 100%;
   height: 500px;
-  display: block;
-  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  object-position: 50% 13%;
 }
 
 .P-bttn {

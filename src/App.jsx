@@ -25,6 +25,7 @@ import SciFiMovies from './pages/SciFiMovies'
 import SportMovies from './pages/SportMovies'
 import ThrillerMovies from './pages/ThrillerMovies'
 import WesternMovies from './pages/WesternMovies'
+import AnimationMovies from './pages/AnimationMovies'
 
 // OFFICIAL API: api.imdbapi.dev
 
@@ -60,6 +61,7 @@ function App() {
         <Route path='/sport' element={<SportMovies />} />
         <Route path='/thriller' element={<ThrillerMovies />} />
         <Route path='/western' element={<WesternMovies />} />
+        <Route path='/animation' element={<AnimationMovies />} />
 
       </Routes>
     </>

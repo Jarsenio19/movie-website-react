@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import LoadingScreen from '../Common/LoadingScreen'
 import { useSearchParams } from 'react-router'
-import { MovieData } from '../../Data/MovieData'
 import MovieCard from '../Cards/MovieCard'
 
 const SearchResult = () => {
@@ -45,7 +45,7 @@ const SearchResult = () => {
       <div className='container'>
         <h3 className=''>SEARCH RESULT FOR: {query} </h3>
         <div className='box-wrapper'>
-          {loading && <h1>LOADING.....</h1>}
+          {loading && <LoadingScreen />}
           {error && <h1>{error}</h1>}
 
           {searchResults.map(

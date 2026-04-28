@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import MovieCard from './MovieCard'
 import LoadingScreen from '../Common/LoadingScreen'
+import MovieCard from './MovieCard'
 
-const FamilyCard = () => {
+const AnimationCard = () => {
+
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -28,13 +29,14 @@ const FamilyCard = () => {
     fetchAPI()
   }, [])
 
-  const familyCard = movies.filter((movie) =>
+  const animationCard = movies.filter((movie) =>
     movie.genres?.some((genre) =>
-      genre.toLowerCase() === "family"
+      genre.toLowerCase() === "animation"
     )
   )
 
   // DOUBLE CHECK!!!
+
 
   return (
     <main>
@@ -47,7 +49,7 @@ const FamilyCard = () => {
             {error && <p>{error}</p>}
 
 
-            {familyCard?.map((data, index) => (
+            {animationCard?.map((data, index) => (
 
               <MovieCard
                 key={index}
@@ -66,4 +68,4 @@ const FamilyCard = () => {
   )
 }
 
-export default FamilyCard
+export default AnimationCard
