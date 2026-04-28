@@ -53,43 +53,43 @@ const Header = () => {
                                         <div className="mega-column">
                                             <Link to="/actionmovies">Action</Link>
                                             <Link to="/adventure&action">Action & Adventure</Link>
-                                            <Link to="/genre/animation">Animation</Link>
+                                            <Link to="/animation">Animation</Link>
                                             <Link to="/biography">Biography</Link>
                                             <Link to="/comedy">Comedy</Link>
-                                            <Link to="/genre/crime">Crime</Link>
-                                            <Link to="/genre/Documentary">Documentary</Link>
-                                            <Link to="/genre/Drama">Drama</Link>
+                                            <Link to="/crime">Crime</Link>
+                                            {/* <Link to="/Documentary">Documentary</Link> */}
+                                            <Link to="/drama">Drama</Link>
                                         </div>
                                         <div className="mega-column">
-                                            <Link to="/genre/Family">Family</Link>
-                                            <Link to="/genre/Fantasy">Fantasy</Link>
-                                            <Link to="/genre/Film-Noir">Film-Noir</Link>
-                                            <Link to="/genre/Game-Show">Game-Show</Link>
-                                            <Link to="/genre/History">History</Link>
-                                            <Link to="/genre/Horror">Horror</Link>
-                                            <Link to="/genre/Kungfu">Kungfu</Link>
-                                            <Link to="/genre/Music">Music</Link>
-                                            <Link to="/genre/Mystery">Mystery</Link>
+                                            <Link to="/family">Family</Link>
+                                            <Link to="/fantasy">Fantasy</Link>
+                                            {/* <Link to="/Film-Noir">Film-Noir</Link> */}
+                                            {/* <Link to="/Game-Show">Game-Show</Link> */}
+                                            <Link to="/history">History</Link>
+                                            <Link to="/horror">Horror</Link>
+                                            {/* <Link to="/kungfu">Kungfu</Link> */}
+                                            <Link to="/music">Music</Link>
+                                            <Link to="/mystery">Mystery</Link>
                                         </div>
                                         <div className="mega-column">
-                                            <Link to="/genre/Mythological">Mythological</Link>
-                                            <Link to="/genre/News">News</Link>
-                                            <Link to="/genre/Psychological">Psychological</Link>
-                                            <Link to="/genre/Reality">Reality</Link>
-                                            <Link to="/genre/Romance">Romance</Link>
-                                            <Link to="/genre/Sci-Fi">Sci-Fi</Link>
-                                            <Link to="/genre/Science Fiction">Science Fiction</Link>
-                                            <Link to="/genre/Short">Short</Link>
-                                            <Link to="/genre/Sitcom">Sitcom</Link>
+                                            {/* <Link to="/Mythological">Mythological</Link> */}
+                                            {/* <Link to="/News">News</Link> */}
+                                            {/* <Link to="/Psychological">Psychological</Link> */}
+                                            {/* <Link to="/Reality">Reality</Link> */}
+                                            <Link to="/romance">Romance</Link>
+                                            <Link to="/sci-fi">Sci-Fi</Link>
+                                            {/* <Link to="/science fiction">Science Fiction</Link> */}
+                                            {/* <Link to="/Short">Short</Link> */}
+                                            {/* <Link to="/Sitcom">Sitcom</Link> */}
                                         </div>
                                         <div className="mega-column">
-                                            <Link to="/genre/Sport">Sport</Link>
-                                            <Link to="/genre/Talk-Show">Talk-Show</Link>
-                                            <Link to="/genre/Thriller">Thriller</Link>
-                                            <Link to="/genre/TV Movie">TV Movie</Link>
-                                            <Link to="/genre/TV Show">TV Show</Link>
-                                            <Link to="/genre/War">War</Link>
-                                            <Link to="/genre/">Western</Link>
+                                            <Link to="/sport">Sport</Link>
+                                            {/* <Link to="/Talk-Show">Talk-Show</Link> */}
+                                            <Link to="/thriller">Thriller</Link>
+                                            {/* <Link to="/TV Movie">TV Movie</Link> */}
+                                            {/* <Link to="/TV Show">TV Show</Link> */}
+                                            {/* <Link to="/War">War</Link> */}
+                                            <Link to="/western">Western</Link>
                                         </div>
                                     </div>
                                 </li>
