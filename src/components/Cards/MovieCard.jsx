@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import './Cards.css'
 
 const MovieCard = ({ id, image, title, isHD, isCAM, isEp, epNum }) => {
+  // TEST
   return (
     <Link to={`/film/${id}`}>
       <div className='box-container'>
