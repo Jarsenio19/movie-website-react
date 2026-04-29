@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router'
 import Header from '../components/Header/Header'
-import Carousel from '../components/Carousel/Carousel'
-import Footer from '../components/Footer/Footer'
 import MovieCardItems from '../components/Cards/MovieCardItems'
 
-const Home = () => {
+const Genre = () => {
+  const { genre: genreFromParams } = useParams()
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -43,27 +42,25 @@ const Home = () => {
     fetchMovies()
   }, [])
 
-  const firstMovie = movies[0]
-  const remainingMovies = movies.slice(1)
+  console.log(movies)
+  const filterByGenre = movies?.filter((item) => {
+    const genres = item.genres?.map((genre) => genre.toLowerCase()) ?? []
 
-  const titles = ['SUGGESTIONS', 'LATEST MOVIES', 'LATEST TV SERIES']
+    if (genreFromParams === 'adventure-action') {
+      return genres.includes('adventure') && genres.includes('action')
+    }
+
+    return genres.includes(genreFromParams)
+  })
+  console.log('filterByGenre', filterByGenre)
 
   return (
-    <>
+    <div>
       <Header />
-      <Carousel movieHighlight={firstMovie} loading={loading} error={error} />
-      {titles.map((item, index) => (
-        <MovieCardItems
-          key={index}
-          title={item}
-          movies={remainingMovies}
-          loading={loading}
-          error={error}
-        />
-      ))}
-      <Footer />
-    </>
+      <div>Filtered by genre: {genreFromParams}</div>
+      <MovieCardItems title='GENRE' movies={filterByGenre} loading={loading} error={error} />
+    </div>
   )
 }
 
-export default Home
+export default Genre

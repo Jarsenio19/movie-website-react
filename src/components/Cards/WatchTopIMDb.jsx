@@ -22,7 +22,7 @@ const WatchTopIMDb = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        setError('Something went wrong while fetching movie');
+        setError('Something went wrong while fetching movie.');
       }
       setLoading(false)
     }
@@ -44,6 +44,7 @@ const WatchTopIMDb = () => {
             {watchTopImdb.map((data, index) => (
               <MovieCard
                 key={index}
+                id={data.id}
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}

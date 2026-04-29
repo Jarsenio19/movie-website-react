@@ -1,4 +1,4 @@
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
 import './Filmbox.css'
 import { useEffect, useState } from 'react'
 import LoadingScreen from '../Common/LoadingScreen'
@@ -29,65 +29,71 @@ const Filmbox = () => {
     fetchAPI()
   }, [])
 
-  const findMovie = movies.find((movie) => movie.id === id)
+  const movieFromId = movies?.find((movie) => movie.id === id)
+  console.log('movieFromId', movieFromId)
 
   return (
     <div className='container-movie-page'>
       {loading && <LoadingScreen />}
       {error && <p>{error}</p>}
 
+      {/* Breadcrumbs */}
       <ul className='semi-nav-container'>
-        <li><a>Home</a> /</li>
-        <li><a>{findMovie?.type}</a>  /</li>
-        <li>{findMovie?.primaryTitle}</li>
+        <li>
+          <a>Home</a> /
+        </li>
+        <li>
+          <a>{movieFromId?.type}</a> /
+        </li>
+        <li>{movieFromId?.primaryTitle}</li>
       </ul>
 
       <div className='video-container'>
-        <img src={findMovie?.image} alt='' />
+        <img src={movieFromId?.image} alt='' />
         <div className='overlay1'></div>
         <button className='P-bttn'></button>
       </div>
 
       <div className='boxer-container'>
         <div className='box1'>
-          <img src={findMovie?.image} alt="" />
+          <img src={movieFromId?.image} alt='' />
           <button className='trailer-bttn'>Trailer</button>
         </div>
 
         <div className='boxer-details'>
-          <h2>{findMovie?.primaryTitle}</h2>
-          <p><i>{findMovie?.plot}</i></p>
+          <h2>{movieFromId?.primaryTitle}</h2>
+          <p>
+            <i>{movieFromId?.plot}</i>
+          </p>
 
           <div className='details-container'>
             <div>
               <ul>
-                <li> <strong>Genre:</strong>
-                  <a>{findMovie?.genres}</a>
-                </li>
                 <li>
                   {' '}
-                  <strong>Actor:</strong>
-                  <a> Neve Campbell, Courteney Cox, Isabel May</a>
-                </li>
-                <li>
-                  <strong>Director: </strong>
-                  Kevin Williamson
-                </li>
-                <li>
-                  <strong>Country:</strong>
-                  <a> United States</a>
+                  <strong>Genre:</strong>
+                  {movieFromId?.genres.map((item, index) => (
+                    <Link to={`/genre/${item.toLowerCase()}`} key={index}>
+                      {item}
+                      {', '}
+                    </Link>
+                  ))}
                 </li>
               </ul>
             </div>
             <div>
               <ul>
-                <li><strong> Duration: </strong>
-                  {findMovie?.runtimeSeconds} sec</li>
-                <li><strong>Rating:</strong>
-                  <span>{findMovie?.rating?.aggregateRating} </span>
+                <li>
+                  <strong> Duration: </strong>
+                  {movieFromId?.runtimeSeconds} sec
                 </li>
-                <li><strong>Release:</strong>
-                  <a> {findMovie?.startYear}</a>
+                <li>
+                  <strong>Rating: </strong>
+                  <span>{movieFromId?.rating?.aggregateRating} </span>
+                </li>
+                <li>
+                  <strong>Release:</strong>
+                  <a> {movieFromId?.startYear}</a>
                 </li>
                 <li>
                   <strong>IMDb:</strong> -
@@ -103,7 +109,8 @@ const Filmbox = () => {
         </div>
       </div>
       <div className='text1'>
-        <p><strong>Keywords:</strong>
+        <p>
+          <strong>Keywords:</strong>
           {/* mask, artificial intelligence (ai), sequel, murder, serial killer */}
         </p>
       </div>

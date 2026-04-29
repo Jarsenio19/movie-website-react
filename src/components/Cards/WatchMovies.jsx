@@ -10,6 +10,7 @@ const WatchMovies = () => {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   useEffect(() => {
+
     const fetchAPI = async () => {
       try {
         setLoading(true)
@@ -23,12 +24,14 @@ const WatchMovies = () => {
         }))
         setMovies(buildMovies)
       } catch (error) {
-        setError('Something went wrong while fetching movie');
+        setError('Something went wrong while fetching movie.');
       }
       setLoading(false)
     }
     fetchAPI()
   }, [])
+
+
 
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
 
@@ -46,6 +49,7 @@ const WatchMovies = () => {
 
               <MovieCard
                 key={index}
+                id={data.id}
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}

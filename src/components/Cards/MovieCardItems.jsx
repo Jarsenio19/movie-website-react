@@ -1,24 +1,16 @@
 import MovieCard from './MovieCard.jsx'
 import './Cards.css'
 import { MovieData } from '../../Data/MovieData.js'
-import { useEffect, useState } from 'react'
-import Home from '../../pages/Home.jsx'
 
-const SuggestionCard = () => {
-
-  <Home />
-
-
-
-
+const MovieCardItems = ({ movies, error, title }) => {
   return (
     <section className='padding-block-100'>
       <div className='container'>
-        <h3>SUGGESTIONS</h3>
+        <h3>{title}</h3>
         <div className='box-wrapper'>
           {error && <h1>{error}</h1>}
 
-          {suggestMovies?.map((data, index) => (
+          {movies?.map((data, index) => (
             <MovieCard
               key={index}
               id={data.id}
@@ -32,4 +24,4 @@ const SuggestionCard = () => {
   )
 }
 
-export default SuggestionCard
+export default MovieCardItems
