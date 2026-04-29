@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import './HeaderStyle.css'
-import SearchInput from '../Common/SearchInput'
+import SearchInput from '../Common/SearchBar/SearchInput'
 
 const Header = () => {
 

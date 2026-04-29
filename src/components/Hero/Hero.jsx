@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import SearchInput2 from '../Common/SearchBar/SearchInput2'
 
 const Hero = () => {
   return (
@@ -10,10 +11,8 @@ const Hero = () => {
 
             <div className="secondary-logo">JAYSONMOVIES</div>
 
-            <div className="secondary-bttn">
-              <input type="text" placeholder="Enter Movies or Series name" />
-              <button className="button">Search</button>
-            </div>
+
+            <SearchInput2 />
 
             <div className="third-bttn flow">
               <h2 className="fs-800 fw-semi-bold text-neutral-100 flow">

@@ -1,0 +1,70 @@
+.secondary-bttn {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  height: 48px;
+  /* 🔑 force consistent height */
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.secondary-bttn input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  /* 🔑 vertical padding removed */
+  font-size: var(--fs-600);
+  height: 100%;
+}
+
+.secondary-bttn button {
+  border: none;
+  padding: 0 20px;
+  background-color: var(--clr-primary-400);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.button4 {
+  border: none;
+  border-radius: 8px;
+  padding: 0 20px;
+  cursor: pointer;
+  background-color: var(--clr-neutral-150);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-regular);
+
+  width: 180px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 45em) {
+  .secondary-bttn {
+    width: 100%;
+    /* ❌ remove 450px */
+  }
+
+  .secondary-bttn input {
+    padding: 0 12px;
+    /* ❌ remove 50px nonsense */
+  }
+
+  .secondary-bttn button {
+    padding: 0 12px;
+    /* keep it compact */
+    max-width: none;
+    /* ❌ remove 70px restriction */
+  }
+}
