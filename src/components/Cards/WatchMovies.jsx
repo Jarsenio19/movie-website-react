@@ -1,6 +1,5 @@
 import MovieCard from "./MovieCard.jsx"
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
 import LoadingScreen from "../Common/LoadingScreen.jsx"
 
@@ -31,8 +30,6 @@ const WatchMovies = () => {
     fetchAPI()
   }, [])
 
-
-
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
 
   return (
@@ -53,7 +50,7 @@ const WatchMovies = () => {
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}
-                isCAM={data.isCAM}
+
               />
 
             ))}

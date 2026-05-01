@@ -94,6 +94,11 @@
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   font-size: var(--fs-500);
+
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0));
+  /* dark overlay to the title */
 }
 
 .play-bttn {

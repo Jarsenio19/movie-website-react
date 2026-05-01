@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router'
+import './Description.css'
 
 const Description = () => {
   return (
@@ -6,7 +8,9 @@ const Description = () => {
       <div className="even-columns">
 
         <div className='padding-block-500'>
-          <div className="third-logo">JAYSONMOVIES</div>
+          <div className="third-logo">
+            <Link to='/' >JAYSONMOVIES</Link>
+          </div>
 
           <p className="fs-500 text-neutral-200">
             <a className="text-primary-400 text-decoration-none">JaysonMovies</a>
@@ -23,11 +27,10 @@ const Description = () => {
         </div>
 
         <div className="links">
-          <div className="column | ">
+          <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a>Reality-TV</a></li>
-              <li><a>Comedy</a></li>
+              <li>Comedy</li>
               <li><a>Drama</a></li>
               <li><a>Crime</a></li>
               <li><a>Horror</a></li>
@@ -53,15 +56,6 @@ const Description = () => {
               <li><a>Top IMDb</a></li>
             </ul>
           </div>
-
-          <div className="column">
-            <h2 className="fs-500 fw-semi-bold text-neutral-100">HELP</h2>
-            <ul className="fs-400 text-primary-400" role="list">
-              <li><a>FAQ's</a></li>
-              <li><a>DMCA</a></li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const Footer = () => {
       <Description />
 
       <footer className="footer |text-neutral-200 padding-block-100 ">
-        <p>Copyright © 2026 JaysonMovies.to. All Rights Reserved</p>
+        <p>Copyright © 2026 movie-website-react-psi.vercel.app All Rights Reserved</p>
       </footer>
     </div>
   )

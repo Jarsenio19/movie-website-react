@@ -1,6 +1,5 @@
 import MovieCard from './MovieCard.jsx'
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from 'react'
 import Home from '../../pages/Home.jsx'
 

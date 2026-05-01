@@ -2,7 +2,7 @@ import '../Hero/Hero.css'
 import { Link } from 'react-router'
 import './Cards.css'
 
-const MovieCard = ({ id, image, title, isHD, isCAM, isEp, epNum }) => {
+const MovieCard = ({ id, image, title }) => {
   return (
     <Link to={`/film/${id}`}>
       <div className='box-container'>
@@ -11,9 +11,6 @@ const MovieCard = ({ id, image, title, isHD, isCAM, isEp, epNum }) => {
           <h3>{title}</h3>
         </div>
 
-        {isHD && <div className='badge'>HD</div>}
-        {isCAM && <div className='badge'>CAM</div>}
-        {isEp && <div className='badge1'>EP {epNum} </div>}
 
         <div className='overlay'>
           <div className='play-bttn'>&#9658;</div>

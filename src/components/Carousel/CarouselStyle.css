@@ -11,6 +11,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 50% 13%;
 }
 
 .carousel-container {
@@ -34,6 +35,18 @@
   width: 100%;
 }
 
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85) 20%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 80%);
+}
+
+
 .carousel-details {
   margin: 50px;
   position: absolute;
@@ -42,6 +55,8 @@
   color: var(--clr-neutral-100);
   cursor: pointer;
   width: 50rem;
+  z-index: 10;
+
 }
 
 .carousel-details>h2 {

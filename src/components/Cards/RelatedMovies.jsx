@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard.jsx'
-import { MovieData } from '../../Data/MovieData.js'
 
 
 const RelatedMovies = () => {
@@ -47,7 +46,7 @@ const RelatedMovies = () => {
               image={data.image}
               title={data.title}
               isHD={data.isHD}
-              isCAM={data.isCAM}
+
             />
 
           ))}

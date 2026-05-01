@@ -7,7 +7,6 @@ import TopIMDb from './pages/TopIMDb'
 import Film from './pages/Film'
 import { Routes, Route } from 'react-router'
 import SearchResult from './components/Common/SearchResult'
-import { MovieData } from './Data/MovieData'
 import Genre from './pages/Genre'
 // OFFICIAL API: api.imdbapi.dev
 
@@ -22,7 +21,6 @@ function App() {
         <Route path='/topimdb' element={<TopIMDb />} />
         <Route path='/film/:id' element={<Film />} />
         <Route path='/search' element={<SearchResult />} />
-        <Route path='/data' element={<MovieData />} />
         <Route path='/genre/:genre' element={<Genre />} />
       </Routes>
     </>
