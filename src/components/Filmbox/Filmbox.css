@@ -1,3 +1,5 @@
+/* Breadcrumbs */
+
 .semi-nav-container {
   display: flex;
   margin: auto;
@@ -15,6 +17,10 @@
 
 .semi-nav-container>li {
   list-style: none;
+}
+
+.semi-nav-container a {
+  text-decoration: none;
 }
 
 .semi-nav-container>li>a {

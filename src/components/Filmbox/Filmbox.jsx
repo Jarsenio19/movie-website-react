@@ -1,4 +1,5 @@
-import { Link, useParams } from 'react-router'
+import { useParams } from 'react-router'
+import { Link } from 'react-router'
 import './Filmbox.css'
 import { useEffect, useState } from 'react'
 import LoadingScreen from '../Common/LoadingScreen'
@@ -32,6 +33,8 @@ const Filmbox = () => {
   const movieFromId = movies?.find((movie) => movie.id === id)
   console.log('movieFromId', movieFromId)
 
+  const typePath = movieFromId?.type === 'tvSeries' ? '/tvseries' : '/movies'
+
   return (
     <div className='container-movie-page'>
       {loading && <LoadingScreen />}
@@ -40,13 +43,14 @@ const Filmbox = () => {
       {/* Breadcrumbs */}
       <ul className='semi-nav-container'>
         <li>
-          <a>Home</a> /
+          <Link to='/home' >Home </Link> {'/'}
         </li>
         <li>
-          <a>{movieFromId?.type}</a> /
+          <Link to={typePath} >{movieFromId?.type} </Link> {'/'}
         </li>
         <li>{movieFromId?.primaryTitle}</li>
       </ul>
+      {/* Breadcrumbs */}
 
       <div className='video-container'>
         <img src={movieFromId?.image} alt='' />
