@@ -39,22 +39,16 @@ const WatchMovies = () => {
           <h3>WATCH MOVIES</h3>
           <div className="box-wrapper">
             {loading && <LoadingScreen />}
-
             {error && <p>{error}</p>}
-
             {watchMovies.map((data, index) => (
-
               <MovieCard
                 key={index}
                 id={data.id}
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}
-
               />
-
             ))}
-
           </div>
         </div>
       </section>

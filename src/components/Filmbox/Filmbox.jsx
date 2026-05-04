@@ -97,7 +97,9 @@ const Filmbox = () => {
                 </li>
                 <li>
                   <strong>Release:</strong>
-                  <a> {movieFromId?.startYear}</a>
+                  <Link to={`/release/${movieFromId?.startYear}`}>
+                    {movieFromId?.startYear}
+                  </Link>
                 </li>
                 <li>
                   <strong>IMDb:</strong> -
