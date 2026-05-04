@@ -421,18 +421,6 @@ main {
 
 /*  for movie pages */
 
-.container-movie-page {
-  --max-width: 1200px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-}
-
-.container-movie-page>h3 {
-  color: var(--clr-primary-400);
-  padding: 0 0 15px 0;
-}
 
 .even-columns {
   --max-width: 1600px;
