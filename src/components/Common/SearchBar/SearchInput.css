@@ -30,7 +30,7 @@
 
 
 
-@media(max-width: 63em) {
+@media(max-width: 65em) {
   .primary-bttn {
     display: none;
   }
