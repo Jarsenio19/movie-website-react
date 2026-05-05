@@ -40,10 +40,10 @@ const RelatedMovies = ({ genres = [], currentMovieId }) => {
   const relatedMovies = movies.filter((movie) => {
     if (movie.id === currentMovieId) return false
 
-    const movieGenres = movie.genres.map(g => g.toLowerCase())
-    const selectedGenres = genres.map(g => g.toLowerCase())
+    const movieGenres = movie.genres.map(item => item.toLowerCase())
+    const selectedGenres = genres.map(item => item.toLowerCase())
 
-    return selectedGenres.some(g => movieGenres.includes(g))
+    return selectedGenres.some(item => movieGenres.includes(item))
   })
   console.log(relatedMovies);
 
@@ -61,7 +61,7 @@ const RelatedMovies = ({ genres = [], currentMovieId }) => {
             {relatedMovies.length > 0 ? (
               relatedMovies.slice(0, 8).map((data) => (
                 <MovieCard
-                  key={data.id} // ✅ fixed key
+                  key={data.id}
                   id={data.id}
                   image={data.image}
                   title={data.title}

@@ -362,22 +362,6 @@ main {
     max-width: 100%;
   }
 
-  .links {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    max-width: 90%;
-    margin-right: 5rem;
-  }
-
-  .links ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  .links ul li a {
-    text-decoration: none;
-  }
 }
 
 

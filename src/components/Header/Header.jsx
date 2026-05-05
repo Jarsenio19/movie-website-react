@@ -35,7 +35,6 @@ const Header = () => {
         ['Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery'],
         ['Romance', 'Sport', 'Thriller', 'Western']
     ]
-
     return (
         <header className="primary-header">
             <div className="container">
@@ -53,15 +52,11 @@ const Header = () => {
                             <img className="icon-hamburger" src="../public/menus.png" alt="" aria-hidden="true" />
                         </button>
                     </div>
-
                     <nav className={`primary-navigation 
                             ${isOpen ? 'active' : ''}`}
                         id="primary-navigation">
-
                         <ul aria-label="Primary" role="list" className="nav-list">
-
                             <Link to='/home'> <li>Home</li></Link>
-
                             <li
                                 className={`mega-parent ${isGenresOpen ? 'active' : ''}`}
                                 onClick={toggleGenres}> <span>Genres</span>

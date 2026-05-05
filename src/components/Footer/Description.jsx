@@ -3,6 +3,11 @@ import { Link } from 'react-router'
 import './Description.css'
 
 const Description = () => {
+
+  const columns = ['Comedy', 'Drama', 'Crime', 'Horror']
+
+
+
   return (
     <section className="padding-block-200 bg-accent-900">
       <div className="even-columns">
@@ -30,10 +35,13 @@ const Description = () => {
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li>Comedy</li>
-              <li><a>Drama</a></li>
-              <li><a>Crime</a></li>
-              <li><a>Horror</a></li>
+              {columns.map((item, index) => (
+                <li key={item}>
+                  <Link key={index} to={`/genre/${item.toLowerCase()}`}>
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -51,9 +59,9 @@ const Description = () => {
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">FREE MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a>Movies</a></li>
-              <li><a>TV-Series</a></li>
-              <li><a>Top IMDb</a></li>
+              <Link to='/movies'><li>Movies</li></Link>
+              <Link to='/tvseries'> <li>TV-Series</li></Link>
+              <Link to='/topimdb'>  <li>Top IMDb</li></Link>
             </ul>
           </div>
         </div>

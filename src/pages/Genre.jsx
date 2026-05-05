@@ -43,9 +43,7 @@ const Genre = () => {
   const filterByGenre = movies?.filter((item) => {
     const genres = item.genres?.map((item) => item.toLowerCase()) ?? []
 
-    const paramGenres = genreFromParams
-      ?.toLowerCase()
-      .split('-') ?? []
+    const paramGenres = genreFromParams?.toLowerCase().split('-') ?? []
 
     return paramGenres.every((item) => genres.includes(item))
   })
