@@ -41,13 +41,13 @@ const Genre = () => {
   }, [])
 
   const filterByGenre = movies?.filter((item) => {
-    const genres = item.genres?.map((genre) => genre.toLowerCase()) ?? []
+    const genres = item.genres?.map((item) => item.toLowerCase()) ?? []
 
-    if (genreFromParams === 'adventure-action') {
-      return genres.includes('adventure') && genres.includes('action')
-    }
+    const paramGenres = genreFromParams
+      ?.toLowerCase()
+      .split('-') ?? []
 
-    return genres.includes(genreFromParams)
+    return paramGenres.every((item) => genres.includes(item))
   })
 
   const upperCaseGenre = genreFromParams?.split('-').map(item => item.toUpperCase()).join(' ');
