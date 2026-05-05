@@ -29,6 +29,13 @@ const Header = () => {
         return () => document.removeEventListener('click', handleClickOutside)
     }, [])
 
+
+    const columns = [
+        ['Action', 'Action & Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Drama'],
+        ['Family', 'Fantasy', 'History', 'Horror', 'Music', 'Mystery'],
+        ['Romance', 'Sport', 'Thriller', 'Western']
+    ]
+
     return (
         <header className="primary-header">
             <div className="container">
@@ -60,28 +67,19 @@ const Header = () => {
                                 onClick={toggleGenres}> <span>Genres</span>
                                 <div className="mega-menu" id="mega-menu">
                                     <div className="mega-column">
-                                        <Link to="/genre/action">Action</Link>
-                                        <Link to="/genre/adventure-action">Action & Adventure</Link>
-                                        <Link to="/genre/animation">Animation</Link>
-                                        <Link to="/genre/biography">Biography</Link>
-                                        <Link to="/genre/comedy">Comedy</Link>
-                                        <Link to="/genre/crime">Crime</Link>
-                                        <Link to="/genre/drama">Drama</Link>
+                                        {columns[0].map((item, index) => (
+                                            <Link key={index} to={`/genre/${item}`} >{item}</Link>
+                                        ))}
                                     </div>
                                     <div className="mega-column">
-                                        <Link to="/genre/family">Family</Link>
-                                        <Link to="/genre/fantasy">Fantasy</Link>
-                                        <Link to="/genre/history">History</Link>
-                                        <Link to="/genre/horror">Horror</Link>
-                                        <Link to="/genre/music">Music</Link>
-                                        <Link to="/genre/mystery">Mystery</Link>
+                                        {columns[1].map((item, index) => (
+                                            <Link key={index} to={`/genre/${item}`}> {item}</Link>
+                                        ))}
                                     </div>
                                     <div className="mega-column">
-                                        <Link to="/genre/romance">Romance</Link>
-                                        <Link to="/genre/sci-fi">Sci-Fi</Link>
-                                        <Link to="/genre/sport">Sport</Link>
-                                        <Link to="/genre/thriller">Thriller</Link>
-                                        <Link to="/genre/western">Western</Link>
+                                        {columns[2].map((item, index) => (
+                                            <Link key={index} to={`/genre/${item}`}>{item}</Link>
+                                        ))}
                                     </div>
                                 </div>
                             </li>

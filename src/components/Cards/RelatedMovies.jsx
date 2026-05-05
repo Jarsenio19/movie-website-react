@@ -1,57 +1,77 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard.jsx'
+import LoadingScreen from '../Common/LoadingScreen.jsx'
 
-
-const RelatedMovies = () => {
+const RelatedMovies = ({ genres = [], currentMovieId }) => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+
   useEffect(() => {
-    const fetchAPI = async () => {
+    const fetchMovies = async () => {
+      setLoading(true)
+      setError('')
+
       try {
-        setLoading(false)
-        const jsonResponse = await fetch('https://api.imdbapi.dev/titles')
-        const result = await jsonResponse.json()
-        const buildMovies = result.titles.map((item) => ({
+        const response = await fetch('https://api.imdbapi.dev/titles')
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch movies')
+        }
+        const result = await response.json()
+        const moviesData = result.titles.map((item) => ({
+          ...item,
           id: item.id,
           title: item.primaryTitle,
-          image: item.primaryImage.url,
-          ...item,
+          image: item.primaryImage?.url || '',
         }))
-        setMovies(buildMovies)
+        setMovies(moviesData)
       } catch (error) {
-        setError('Something went wrong while fetching movie.');
+        console.error(error)
+        setError('Something went wrong while fetching movies.')
+      } finally {
+        setLoading(false)
       }
-      setLoading(true)
     }
-    fetchAPI()
+    fetchMovies()
   }, [])
 
-  const relatedMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie' ?
-    movie.type.toLowerCase() === 'tvseries' :
-    movie.type.toLowerCase() === 'tvminiseries')
+  // ✅ FILTER LOGIC (THIS WAS MISSING)
+  const relatedMovies = movies.filter((movie) => {
+    if (movie.id === currentMovieId) return false
+
+    const movieGenres = movie.genres.map(g => g.toLowerCase())
+    const selectedGenres = genres.map(g => g.toLowerCase())
+
+    return selectedGenres.some(g => movieGenres.includes(g))
+  })
+  console.log(relatedMovies);
 
 
   return (
     <section className="padding-block-100">
-      <div className='container-movie-page'>
+      <div className="container">
         <h3>RELATED MOVIES</h3>
-        <div className="box-wrapper">
-          {error && <p>{error}</p>}
 
-          {relatedMovies.map((data, index) => (
+        {loading && <LoadingScreen />}
+        {error && <p>{error}</p>}
 
-            <MovieCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              isHD={data.isHD}
-
-            />
-
-          ))}
-
-        </div>
+        {!loading && !error && (
+          <div className="box-wrapper">
+            {relatedMovies.length > 0 ? (
+              relatedMovies.slice(0, 8).map((data) => (
+                <MovieCard
+                  key={data.id} // ✅ fixed key
+                  id={data.id}
+                  image={data.image}
+                  title={data.title}
+                />
+              ))
+            ) : (
+              <p>No related movies found.</p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   )

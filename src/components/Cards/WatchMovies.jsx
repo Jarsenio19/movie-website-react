@@ -29,9 +29,7 @@ const WatchMovies = () => {
     }
     fetchAPI()
   }, [])
-
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
-
   return (
     <main>
       <section className="padding-block-100">
@@ -46,7 +44,6 @@ const WatchMovies = () => {
                 id={data.id}
                 image={data.image}
                 title={data.title}
-                isHD={data.isHD}
               />
             ))}
           </div>

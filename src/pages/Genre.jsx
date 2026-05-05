@@ -22,16 +22,13 @@ const Genre = () => {
         if (!response.ok) {
           throw new Error('Failed to fetch movies')
         }
-
         const result = await response.json()
-
         const moviesData = result.titles.map((item) => ({
           ...item,
           id: item.id,
           title: item.primaryTitle,
           image: item.primaryImage?.url || '',
         }))
-
         setMovies(moviesData)
       } catch (error) {
         console.error(error)
@@ -40,7 +37,6 @@ const Genre = () => {
         setLoading(false)
       }
     }
-
     fetchMovies()
   }, [])
 
