@@ -45,7 +45,6 @@ const RelatedMovies = ({ genres = [], currentMovieId }) => {
 
     return selectedGenres.some(item => movieGenres.includes(item))
   })
-  console.log(relatedMovies);
 
 
   return (

@@ -33,12 +33,9 @@ const SearchResult = () => {
     }
     fetchAPI()
   }, [])
-
   const searchResults = movies.filter((movie) =>
     movie.title.toLowerCase().includes(query.toLowerCase()),
   )
-
-
   return (
     <>
       <main>
@@ -51,13 +48,10 @@ const SearchResult = () => {
               {error && <h1>{error}</h1>}
 
               {searchResults.map(
-                ({ image, title, isHD, isCAM, isEp, epNum }, index) => (
+                ({ image, title }, index) => (
                   <MovieCard
                     key={index}
                     image={image}
-                    title={title}
-                    isHD={isHD}
-
                   />
                 ),
               )}

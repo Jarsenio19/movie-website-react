@@ -3,11 +3,7 @@ import { Link } from 'react-router'
 import './Description.css'
 
 const Description = () => {
-
   const columns = ['Comedy', 'Drama', 'Crime', 'Horror']
-
-
-
   return (
     <section className="padding-block-200 bg-accent-900">
       <div className="even-columns">
@@ -30,7 +26,6 @@ const Description = () => {
             are provided by non-affiliated third parties.
           </p>
         </div>
-
         <div className="links">
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
@@ -44,7 +39,6 @@ const Description = () => {
               ))}
             </ul>
           </div>
-
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">COUNTRY</h2>
             <ul className="fs-400 text-primary-400" role="list">
@@ -55,7 +49,6 @@ const Description = () => {
               <li><a>Slovenia</a></li>
             </ul>
           </div>
-
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">FREE MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">

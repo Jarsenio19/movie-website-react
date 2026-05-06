@@ -1,15 +1,9 @@
 import './SearchInput.css'
-
-import { useState } from 'react'
-import { useNavigate } from 'react-router'
+import { IoSearchOutline } from "react-icons/io5";
 import SearchForm from './SearchForm'
 
-
 const SearchInput = () => {
-
-
   return (
-
     <SearchForm>
       {({ input, setInput, handleSubmit }) => (
         <div className="primary-bttn">
@@ -21,9 +15,8 @@ const SearchInput = () => {
               type="text"
               placeholder="Search.."
             />
-
             <button className="button display-sm-none display-md-inline-flex">
-              <img src="/search.png" alt="search" />
+              <IoSearchOutline />
             </button>
           </form>
         </div>

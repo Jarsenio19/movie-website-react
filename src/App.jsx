@@ -23,7 +23,7 @@ function App() {
         <Route path='/topimdb' element={<TopIMDb />} />
         <Route path='/film/:id' element={<Film />} />
         <Route path='/search' element={<SearchResult />} />
-        <Route path='/relatedmovies' element={<RelatedMovies />} />
+        <Route path='/related-movies' element={<RelatedMovies />} />
         <Route path='/genre/:genre' element={<Genre />} />
         <Route path='/release/:year' element={<ReleaseYear />} />
       </Routes>

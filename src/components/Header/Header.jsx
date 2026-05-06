@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import './HeaderStyle.css'
 import SearchInput from '../Common/SearchBar/SearchInput'
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
 
@@ -49,7 +50,7 @@ const Header = () => {
                             onClick={toggleMenu}
                             aria-expanded={isOpen}
                         >
-                            <img className="icon-hamburger" src="../public/menus.png" alt="" aria-hidden="true" />
+                            <GiHamburgerMenu className='hamburger-icon' />
                         </button>
                     </div>
                     <nav className={`primary-navigation 

@@ -11,20 +11,16 @@ const ReleaseYear = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-
   useEffect(() => {
     const fetchMovies = async () => {
       setLoading(true)
       setError('')
-
       try {
         const response = await fetch('https://api.imdbapi.dev/titles')
-
         if (!response.ok) {
           throw new Error('Failed to fetch movies')
         }
         const result = await response.json()
-
         const moviesData = result.titles.map((item) => ({
           ...item,
           id: item.id,
@@ -41,18 +37,13 @@ const ReleaseYear = () => {
     }
     fetchMovies()
   }, [])
-
   const filterByYear = movies?.filter((item) => {
     return String(item.startYear) === year
   })
-  console.log(filterByYear);
-
-
   return (
     <main>
       <div>
         <Header />
-
         <MovieCardItems
           title={year}
           movies={filterByYear}
