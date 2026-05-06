@@ -48,9 +48,10 @@ const SearchResult = () => {
               {error && <h1>{error}</h1>}
 
               {searchResults.map(
-                ({ image, title }, index) => (
+                ({ image, title, id }, index) => (
                   <MovieCard
                     key={index}
+                    id={id}
                     image={image}
                   />
                 ),
