@@ -33,37 +33,37 @@ const SearchResult = () => {
     }
     fetchAPI()
   }, [])
-
   const searchResults = movies.filter((movie) =>
     movie.title.toLowerCase().includes(query.toLowerCase()),
   )
-
-
   return (
-    <section className='padding-block-100'>
-      <Header />
-      <div className='container'>
-        <h3 className=''>SEARCH RESULT FOR: {query} </h3>
-        <div className='box-wrapper'>
-          {loading && <LoadingScreen />}
-          {error && <h1>{error}</h1>}
+    <>
+      <main>
+        <section className='padding-block-100'>
+          <Header />
+          <div className='container'>
+            <h3 className=''>SEARCH RESULT FOR: {query} </h3>
+            <div className='box-wrapper'>
+              {loading && <LoadingScreen />}
+              {error && <h1>{error}</h1>}
 
-          {searchResults.map(
-            ({ image, title, isHD, isCAM, isEp, epNum }, index) => (
-              <MovieCard
-                key={index}
-                image={image}
-                title={title}
-                isHD={isHD}
-                isCAM={isCAM}
-                isEp={isEp}
-                epNum={epNum}
-              />
-            ),
-          )}
-        </div>
-      </div>
-    </section >
+              {searchResults.map(
+                ({ image, title, id }, index) => (
+                  <MovieCard
+                    key={index}
+                    id={id}
+                    image={image}
+                  />
+                ),
+              )}
+            </div>
+          </div>
+        </section >
+      </main>
+      <Footer />
+
+
+    </>
   )
 }
 

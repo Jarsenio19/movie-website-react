@@ -1,6 +1,5 @@
 import MovieCard from "./MovieCard.jsx"
 import './Cards.css'
-import { MovieData } from '../../Data/MovieData.js'
 import { useEffect, useState } from "react"
 import LoadingScreen from "../Common/LoadingScreen.jsx"
 
@@ -30,11 +29,7 @@ const WatchMovies = () => {
     }
     fetchAPI()
   }, [])
-
-
-
   const watchMovies = movies.filter((movie) => movie.type.toLowerCase() === 'movie')
-
   return (
     <main>
       <section className="padding-block-100">
@@ -42,22 +37,15 @@ const WatchMovies = () => {
           <h3>WATCH MOVIES</h3>
           <div className="box-wrapper">
             {loading && <LoadingScreen />}
-
             {error && <p>{error}</p>}
-
             {watchMovies.map((data, index) => (
-
               <MovieCard
                 key={index}
                 id={data.id}
                 image={data.image}
                 title={data.title}
-                isHD={data.isHD}
-                isCAM={data.isCAM}
               />
-
             ))}
-
           </div>
         </div>
       </section>

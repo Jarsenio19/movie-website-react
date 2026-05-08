@@ -15,7 +15,7 @@ const Carousel = ({ movieHighlight }) => {
             <li className='carousel-slide current-slide'>
               <a>
                 <img className='carousel-image' src={image} alt='' />
-                <Link to='/film'>
+                <Link to={`/film/${movieHighlight?.id}`} >
                   <div className='carousel-details'>
                     <h2>{primaryTitle}</h2>
                     <p>

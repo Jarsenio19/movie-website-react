@@ -2,23 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import Header from '../components/Header/Header'
 import MovieCardItems from '../components/Cards/MovieCardItems'
-import Footer from '../components/Footer/Footer'
 import Pagination from '../components/Pagination/Pagination'
+import Footer from '../components/Footer/Footer'
+import LoadingScreen from '../components/Common/LoadingScreen'
 
-const Genre = () => {
-  const { genre: genreFromParams } = useParams()
+const ReleaseYear = () => {
+  const { year } = useParams()
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-
   useEffect(() => {
     const fetchMovies = async () => {
       setLoading(true)
       setError('')
-
       try {
         const response = await fetch('https://api.imdbapi.dev/titles')
-
         if (!response.ok) {
           throw new Error('Failed to fetch movies')
         }
@@ -39,26 +37,19 @@ const Genre = () => {
     }
     fetchMovies()
   }, [])
-
-  const filterByGenre = movies?.filter((item) => {
-    const genres = item.genres?.map((item) => item.toLowerCase()) ?? []
-
-    const paramGenres = genreFromParams?.toLowerCase().split('-') ?? []
-
-    return paramGenres.every((item) => genres.includes(item))
+  const filterByYear = movies?.filter((item) => {
+    return String(item.startYear) === year
   })
-
-  const upperCaseGenre = genreFromParams?.split('-').map(item => item.toUpperCase()).join(' ');
-
   return (
     <main>
       <div>
         <Header />
         <MovieCardItems
-          title={upperCaseGenre}
-          movies={filterByGenre}
+          title={year}
+          movies={filterByYear}
           loading={loading}
-          error={error} />
+          error={error}
+        />
         <Pagination />
         <Footer />
       </div>
@@ -66,4 +57,5 @@ const Genre = () => {
   )
 }
 
-export default Genre
+export default ReleaseYear
+

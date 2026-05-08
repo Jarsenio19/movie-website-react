@@ -5,11 +5,12 @@
   margin-bottom: var(--size-700);
 }
 
+
 .box-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 150px));
-  gap: 2rem;
-  padding-bottom: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+  gap: 1rem;
+
 }
 
 .box-container {
@@ -19,7 +20,7 @@
 
 .box {
   border: none;
-  height: 250px;
+  height: 260px;
   width: 100%;
   overflow: hidden;
   cursor: pointer;
@@ -29,6 +30,7 @@
   height: 100%;
   width: 100%;
   display: block;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s ease;
 }
@@ -39,7 +41,9 @@
   transform: scale(1.05);
 }
 
-.badge {
+/* For badge feature */
+
+/* .badge {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -61,7 +65,7 @@
   font-weight: var(--fw-semi-bold);
   padding: 4px 5px;
   border-radius: 4px;
-}
+} */
 
 .overlay {
   position: absolute;
@@ -94,6 +98,11 @@
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   font-size: var(--fs-500);
+
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0));
+  /* dark overlay to the title */
 }
 
 .play-bttn {
@@ -118,4 +127,107 @@
 
 .box:hover .play-bttn {
   transform: scale(1.1);
+}
+
+@media (max-width: 80em) {
+
+  .box-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    gap: 1rem;
+
+  }
+
+  .box-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .box {
+    border: none;
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .container {
+    --max-width: 1000px;
+    --padding: 1rem;
+
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+
+  }
+
+}
+
+@media (max-width: 60em) {
+
+  .box-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    gap: 1rem;
+
+  }
+
+  .box-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .box {
+    border: none;
+    height: 210px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .container {
+    --max-width: 800px;
+    --padding: 1rem;
+
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+
+  }
+
+}
+
+@media(max-width: 45em) {
+  .box-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0;
+
+  }
+
+  .box-container {
+    position: relative;
+    height: 100%;
+    border: none;
+  }
+
+  .box {
+    border: none;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .container {
+    --max-width: 500px;
+    --padding: 1rem;
+
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+
+  }
+
 }

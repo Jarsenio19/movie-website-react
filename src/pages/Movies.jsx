@@ -11,7 +11,6 @@ const Movies = () => {
       <WatchMovies />
       <Pagination />
       <Footer />
-
     </>
   )
 }

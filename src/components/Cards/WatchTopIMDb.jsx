@@ -48,7 +48,7 @@ const WatchTopIMDb = () => {
                 image={data.image}
                 title={data.title}
                 isHD={data.isHD}
-                isCAM={data.isCAM}
+
               />
 
             ))}

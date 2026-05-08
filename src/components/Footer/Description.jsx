@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router'
+import './Description.css'
 
 const Description = () => {
+  const columns = ['Comedy', 'Drama', 'Crime', 'Horror']
   return (
     <section className="padding-block-200 bg-accent-900">
       <div className="even-columns">
 
         <div className='padding-block-500'>
-          <div className="third-logo">JAYSONMOVIES</div>
+          <div className="third-logo">
+            <Link to='/' >JAYSONMOVIES</Link>
+          </div>
 
           <p className="fs-500 text-neutral-200">
             <a className="text-primary-400 text-decoration-none">JaysonMovies</a>
@@ -21,19 +26,19 @@ const Description = () => {
             are provided by non-affiliated third parties.
           </p>
         </div>
-
         <div className="links">
-          <div className="column | ">
+          <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a>Reality-TV</a></li>
-              <li><a>Comedy</a></li>
-              <li><a>Drama</a></li>
-              <li><a>Crime</a></li>
-              <li><a>Horror</a></li>
+              {columns.map((item, index) => (
+                <li key={item}>
+                  <Link key={index} to={`/genre/${item.toLowerCase()}`}>
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">COUNTRY</h2>
             <ul className="fs-400 text-primary-400" role="list">
@@ -44,24 +49,14 @@ const Description = () => {
               <li><a>Slovenia</a></li>
             </ul>
           </div>
-
           <div className="column">
             <h2 className="fs-500 fw-semi-bold text-neutral-100">FREE MOVIES</h2>
             <ul className="fs-400 text-primary-400" role="list">
-              <li><a>Movies</a></li>
-              <li><a>TV-Series</a></li>
-              <li><a>Top IMDb</a></li>
+              <Link to='/movies'><li>Movies</li></Link>
+              <Link to='/tvseries'> <li>TV-Series</li></Link>
+              <Link to='/topimdb'>  <li>Top IMDb</li></Link>
             </ul>
           </div>
-
-          <div className="column">
-            <h2 className="fs-500 fw-semi-bold text-neutral-100">HELP</h2>
-            <ul className="fs-400 text-primary-400" role="list">
-              <li><a>FAQ's</a></li>
-              <li><a>DMCA</a></li>
-            </ul>
-          </div>
-
         </div>
       </div>
     </section>
