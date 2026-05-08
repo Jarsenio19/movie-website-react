@@ -1,11 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard.jsx'
 import LoadingScreen from '../Common/LoadingScreen.jsx'
+import { useParams } from 'react-router'
 
-const RelatedMovies = ({ genres = [], currentMovieId }) => {
+const RelatedMovies = () => {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const { id: idFromParams } = useParams()
+
+  const getRelatedMoviesFromGenre = (moviesData, movieSelected) => {
+    const genreOfMovieSelected = movieSelected.genres
+
+    const filtered = moviesData.filter((item) => {
+      const genreFromItem = item.genres
+      return genreOfMovieSelected.some((selectedGenre) =>
+        genreFromItem.includes(selectedGenre),
+      )
+    })
+
+    return filtered
+  }
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -25,7 +40,17 @@ const RelatedMovies = ({ genres = [], currentMovieId }) => {
           title: item.primaryTitle,
           image: item.primaryImage?.url || '',
         }))
-        setMovies(moviesData)
+
+        const movieSelected = moviesData.find(
+          (item) => item.id === idFromParams,
+        )
+
+        const allRelatedMovies = getRelatedMoviesFromGenre(
+          moviesData,
+          movieSelected,
+        )
+
+        setMovies(allRelatedMovies)
       } catch (error) {
         console.error(error)
         setError('Something went wrong while fetching movies.')
@@ -36,36 +61,27 @@ const RelatedMovies = ({ genres = [], currentMovieId }) => {
     fetchMovies()
   }, [])
 
-  // ✅ FILTER LOGIC (THIS WAS MISSING)
-  const relatedMovies = movies.filter((movie) => {
-    if (movie.id === currentMovieId) return false
-
-    const movieGenres = movie.genres.map(item => item.toLowerCase())
-    const selectedGenres = genres.map(item => item.toLowerCase())
-
-    return selectedGenres.some(item => movieGenres.includes(item))
-  })
-
-
   return (
-    <section className="padding-block-100">
-      <div className="container">
+    <section className='padding-block-100'>
+      <div className='container'>
         <h3>RELATED MOVIES</h3>
 
         {loading && <LoadingScreen />}
         {error && <p>{error}</p>}
 
         {!loading && !error && (
-          <div className="box-wrapper">
-            {relatedMovies.length > 0 ? (
-              relatedMovies.slice(0, 8).map((data) => (
-                <MovieCard
-                  key={data.id}
-                  id={data.id}
-                  image={data.image}
-                  title={data.title}
-                />
-              ))
+          <div className='box-wrapper'>
+            {movies.length > 0 ? (
+              movies
+                .slice(0, 6)
+                .map((data) => (
+                  <MovieCard
+                    key={data.id}
+                    id={data.id}
+                    image={data.image}
+                    title={data.title}
+                  />
+                ))
             ) : (
               <p>No related movies found.</p>
             )}

@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import './Filmbox.css'
 import { useEffect, useState } from 'react'
 import LoadingScreen from '../Common/LoadingScreen'
+import prettyMilliseconds from 'pretty-ms'
 
 const Filmbox = () => {
   const [movies, setMovies] = useState([])
@@ -31,7 +32,6 @@ const Filmbox = () => {
   }, [])
 
   const movieFromId = movies?.find((movie) => movie.id === id)
-  console.log('movieFromId', movieFromId)
 
   const typePath = movieFromId?.type === 'tvSeries' ? '/tvseries' : '/movies'
 
@@ -43,10 +43,10 @@ const Filmbox = () => {
       {/* Breadcrumbs */}
       <ul className='semi-nav-container'>
         <li>
-          <Link to='/home' >Home </Link> {'/'}
+          <Link to='/home'>Home </Link> {'/'}
         </li>
         <li>
-          <Link to={typePath} >{movieFromId?.type} </Link> {'/'}
+          <Link to={typePath}>{movieFromId?.type} </Link> {'/'}
         </li>
         <li>{movieFromId?.primaryTitle}</li>
       </ul>
@@ -89,7 +89,9 @@ const Filmbox = () => {
               <ul>
                 <li>
                   <strong> Duration: </strong>
-                  {movieFromId?.runtimeSeconds} sec
+                  {prettyMilliseconds(
+                    (movieFromId?.runtimeSeconds ?? 0) * 1000,
+                  )}
                 </li>
                 <li>
                   <strong>Rating: </strong>
